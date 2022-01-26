@@ -1,3 +1,3 @@
-# Instagram-Clone
+# Instagram-clone-MERN-Stack
 
-Making a clone of Instagram. Frontend based on React.js and Backend using Node.js, Express.js and MongoDb as the database. Also used cloudinary as our cloud storage.
+This Repo has complete code of my MERN stack series on YouTube https://www.youtube.com/playlist?list=PLB97yPrFwo5g0FQr4rqImKa55F_aPiQWk
