@@ -1,4 +1,16 @@
-# Instagram-Clone-Social-Media-App
+<h1 align="center"># Instagram-Clone-Social-Media-App </h1>
+<br>
+
+<h1 align="center">
+🌐 MERN Stack
+</h1>
+<p align="center">
+MongoDB, Expressjs, Reactjs, Nodejs
+</p>
+
+> MERN is a fullstack implementation in MongoDB, Expressjs, React/Redux, Nodejs.
+
+MERN stack is the idea of using Javascript/Node for fullstack web development.
 
 Discover about different people by having a visit at this Instagram-Clone : 
 https://instaclone2305.herokuapp.com/
@@ -22,17 +34,6 @@ I learnt a lot about react & backend stuff while doing this including:
 - Changing react versions can prove to be a hard task. Build error, npm package dependcies, and more...
 
 
-
-<h1 align="center">
-🌐 MERN Stack
-</h1>
-<p align="center">
-MongoDB, Expressjs, Reactjs, Nodejs
-</p>
-
-> MERN is a fullstack implementation in MongoDB, Expressjs, React/Redux, Nodejs.
-
-MERN stack is the idea of using Javascript/Node for fullstack web development.
 
 ## clone or download
 ```terminal
