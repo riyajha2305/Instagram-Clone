@@ -1,4 +1,4 @@
-<h1 align="center"># Instagram-Clone-Social-Media-App </h1>
+<h1 align="center">Instagram-Clone-Social-Media-App</h1>
 <br>
 
 <h1 align="center">
