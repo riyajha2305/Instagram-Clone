@@ -106,7 +106,7 @@ run the script at the first level:
 ```terminal
 $ cd myproject  // go to server folder
 $ npm i       // npm install packages
-$ npodemon app // this will run the server side app
+$ nodemon app // this will run the server side app
 ```
 
 ## Deploy Server to [Heroku](https://dashboard.heroku.com/)
