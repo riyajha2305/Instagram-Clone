@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Instagram-Clone
 Instagram Clone | MERN Stack
 
@@ -106,7 +106,7 @@ run the script at the first level:
 ```terminal
 $ cd myproject  // go to server folder
 $ npm i       // npm install packages
-$ npodemon app // this will run the server side app
+$ nodemon app // this will run the server side app
 ```
 
 ## Deploy Server to [Heroku](https://dashboard.heroku.com/)
@@ -136,4 +136,4 @@ User can go to his/her profile page
 
 User can visit other users profile and follow/unfollow
 ![User can visit other users profile and follow/unfollow](https://github.com/riyajha2305/Instagram-Clone/blob/master/screenshots/4.png)
->>>>>>> 0f172ef4dd6e3252be61f78cfbe69f4277ba9cac
+
