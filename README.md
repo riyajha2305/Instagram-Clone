@@ -99,8 +99,6 @@ $ npm start  // run the client side app
 
 run the script at the first level:
 
-(You need to add a JWT_SECRET in .env to connect to MongoDB)
-
 ### Start
 
 ```terminal
