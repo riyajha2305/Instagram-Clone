@@ -1,6 +1,9 @@
 import React,{useContext,useRef,useEffect,useState} from 'react'
 import {Link ,useHistory} from 'react-router-dom'
 import {UserContext} from '../App'
+import PersonIcon from '@mui/icons-material/Person';
+import AddIcon from '@mui/icons-material/Add';
+import HomeIcon from '@mui/icons-material/Home';
 import M from 'materialize-css'
 const NavBar = ()=>{
     const  searchModal = useRef(null)
@@ -8,15 +11,17 @@ const NavBar = ()=>{
     const [userDetails,setUserDetails] = useState([])
      const {state,dispatch} = useContext(UserContext)
      const history = useHistory()
+     
      useEffect(()=>{
          M.Modal.init(searchModal.current)
      },[])
+
      const renderList = ()=>{
        if(state){
            return [
             <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}>search</i></li>,
-            <li key="2"><Link to="/profile">Profile</Link></li>,
-            <li key="3"><Link to="/create">Create Post</Link></li>,
+            <li key="2"><Link to="/profile"><HomeIcon /></Link></li>,
+            <li key="3"><Link to="/create"><AddIcon /></Link></li>,
             <li key="4"><Link to="/myfollowingpost">My following Posts</Link></li>,
             <li  key="5">
              <button className="btn #c62828 red darken-3"
