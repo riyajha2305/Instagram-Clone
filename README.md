@@ -93,7 +93,7 @@ $ npm start  // run the client side app
 
 ```
 
-## Server-side usage(PORT: 8000)
+## Server-side usage(PORT: 5000)
 
 ### Prepare your secret
 
