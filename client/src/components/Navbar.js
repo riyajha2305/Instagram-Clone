@@ -4,7 +4,7 @@ import {UserContext} from '../App'
 import M from 'materialize-css'
 //icons
 import { BsPersonCircle,BsPlusSquare,BsSearch } from "react-icons/bs";
-import { AiFillHome } from "react-icons/ai";
+import { HiUsers } from "react-icons/hi";
 
 
 const NavBar = ()=>{
@@ -22,7 +22,7 @@ const NavBar = ()=>{
             <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
             <li key="2" ><Link to="/profile" ><i ><BsPersonCircle size=" 1.75rem"  /></i></Link></li>,
             <li key="3"><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
-            <li key="4"><Link to="/myfollowingpost"><i><AiFillHome size=" 1.75rem"  /></i></Link></li>,
+            <li key="4"><Link to="/myfollowingpost"><i><HiUsers size=" 1.75rem"  /></i></Link></li>,
             <li  key="5">
              <button className="btn #c62828 red darken-3"
             onClick={()=>{
