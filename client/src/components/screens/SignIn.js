@@ -42,31 +42,41 @@ const SignIn  = ()=>{
       <div className="mycard">
           <div className="card auth-card input-field">
             <h2>Instagram</h2>
-            <input
-            type="text"
-            placeholder="email"
-            value={email}
-            onChange={(e)=>setEmail(e.target.value)}
-            />
-            <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e)=>setPasword(e.target.value)}
-            />
-            <button className="btn waves-effect waves-light #64b5f6 blue darken-1"
+            <form className='formstyle'>
+                <input
+                type="text"
+                placeholder="Phone number,username, or email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
+                />
+            </form>
+            <form className='formstyle'>
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e)=>setPasword(e.target.value)}
+                    />
+            </form>
+            <button className="btn"
             onClick={()=>PostData()}
             >
-                Login
+                Log in
             </button>
-            <h5>
-                <Link to="/signup">Dont have an account ?</Link>
-            </h5>
-            <h6>
-                <Link to="/reset">Forgot password ?</Link>
+            <h6>---------------     OR      ---------------</h6>
+            <h6 classname="forcolor">
+                <Link to="/reset">Log in with Facebook</Link>
             </h6>
-    
+            <h6 classname="forcolor">
+                <Link to="/reset">Forgot password?</Link>
+            </h6>
         </div>
+        <div className="forsignup">
+            <h5>
+                <Link to="/signup">Don't have an account ? Sign Up</Link>
+            </h5>
+        </div>
+    
       </div>
    )
 }
