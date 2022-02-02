@@ -2,6 +2,11 @@ import React,{useContext,useRef,useEffect,useState} from 'react'
 import {Link ,useHistory} from 'react-router-dom'
 import {UserContext} from '../App'
 import M from 'materialize-css'
+//icons
+import { BsPersonCircle,BsPlusSquare,BsSearch } from "react-icons/bs";
+import { AiFillHome } from "react-icons/ai";
+
+
 const NavBar = ()=>{
     const  searchModal = useRef(null)
     const [search,setSearch] = useState('')
@@ -14,10 +19,10 @@ const NavBar = ()=>{
      const renderList = ()=>{
        if(state){
            return [
-            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}>search</i></li>,
-            <li key="2"><Link to="/profile">Profile</Link></li>,
-            <li key="3"><Link to="/create">Create Post</Link></li>,
-            <li key="4"><Link to="/myfollowingpost">My following Posts</Link></li>,
+            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
+            <li key="2" ><Link to="/profile" ><i ><BsPersonCircle size=" 1.75rem"  /></i></Link></li>,
+            <li key="3"><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
+            <li key="4"><Link to="/myfollowingpost"><i><AiFillHome size=" 1.75rem"  /></i></Link></li>,
             <li  key="5">
              <button className="btn #c62828 red darken-3"
             onClick={()=>{
