@@ -17,7 +17,7 @@ Points : 1<br>
 Github Profile : https://github.com/KMJ-007<br>
 
 ## Name :  Dhruv<br>
-Issue number : #24 | #<br>
+Issue number : #24 | #25<br>
 Difficulty level : Hard | Hard<br>
 Points : 10<br>
 Github Profile : https://github.com/dhruvtongia<br>
