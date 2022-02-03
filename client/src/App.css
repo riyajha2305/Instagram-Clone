@@ -9,11 +9,12 @@ a{
 }
 
 .mycard{
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .auth-card{
   padding: 20px;
+  padding-top: 1px;
   text-align: center;
   max-width: 400px;
   margin: 10px auto;
@@ -29,37 +30,58 @@ a{
 }
 
 .formstyle{
-  width: 85%;
+  width: 90%;
   padding-left: 8px;
   border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px;
   margin-bottom: 4px; 
-  margin-left: 30px;
+  margin-left: 20px;
   resize: vertical 
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 20px;
+}
+.getapp{
+    padding: 10px;
+    text-align: center;
+    max-width: 400px;
+    margin: 2px auto;
+    
+}
 .btn{
   /* waves-effect waves-light #64b5f6 blue darken-1  */
   margin-top: 10px;
   margin-bottom: 8px;
   margin-left: 7px;
-  width:85%;
+  width:90%;
   border-radius: 6px;
 }
-.forcolor
-{
-  color:blue;
+.forcolor{
+  /* text-decoration-line: line-through; */
+  color: blue;
 }
-
-.forsignup{
-  margin-top: 30px;
-  box-sizing: border-box;
-  padding: 20px;
-  text-align: center;
-  max-width: 400px;
-  margin: 10px auto;
+.welcometext
+{
+  color: gray;
+  margin: 20px;
+  margin-top: 2px;
+}
+.card2{
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
 .gallery{

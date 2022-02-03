@@ -72,26 +72,43 @@ const SignIn  = ()=>{
       <div className="mycard">
           <div className="card auth-card input-field">
             <h2>Instagram</h2>
-            <input
-            type="text"
-            placeholder="name"
-            value={name}
-            onChange={(e)=>setName(e.target.value)}
-            />
-            <input
-            type="text"
-            placeholder="email"
-            value={email}
-            onChange={(e)=>setEmail(e.target.value)}
-            />
-            <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e)=>setPasword(e.target.value)}
-            />
+            <h5 className="welcometext">
+            Sign up to see photos and videos from your friends.
+            </h5>
+            <button className="btn"
+            onClick={()=>PostData()}
+            >
+                Log in with facebook
+            </button>
+            <h6 >---------------     OR     ----------------</h6>
+            
+            <form className='formstyle'>
+                <input
+                type="text"
+                placeholder="name"
+                value={name}
+                onChange={(e)=>setName(e.target.value)}
+                />
+            </form>
+            <form className='formstyle'>
+                <input
+                type="text"
+                placeholder="email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
+                />
+            </form>
+            <form className='formstyle'>
+                <input
+                type="password"
+                placeholder="password"
+                value={password}
+                onChange={(e)=>setPasword(e.target.value)}
+                />
+            </form>
             <div className="file-field input-field">
-            <div className="btn #64b5f6 blue darken-1">
+            <div className="btn">
+            {/* #64b5f6 blue darken-1 */}
                 <span>Upload pic</span>
                 <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
             </div>
@@ -99,19 +116,33 @@ const SignIn  = ()=>{
                 <input className="file-path validate" type="text" />
             </div>
             </div>
-            <button className="btn waves-effect waves-light #64b5f6 blue darken-1"
+            <button className="btn"
             onClick={()=>PostData()}
             >
+                 {/* waves-effect waves-light #64b5f6 blue darken-1 */}
                 SignUP
             </button>
-            <h5>
-                <Link to="/signin">Already have an account ?</Link>
-            </h5>
-             
-               
-         
-            
-    
+            <h6>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</h6>
+        </div>
+        <div className="card2">
+            <h6>
+            <Link to="/signin">Already have an account ? Log In</Link>
+            </h6>
+        </div>
+        <div className="getapp">
+            <h5>Get the app</h5>
+            <div className="row">
+                <div class="column">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
+                     alt="AppStore" width="150" 
+                     height="40"/>
+                </div>
+                <div class="column">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" 
+                    alt="GooglePlay"  width="150" 
+                    height="40"/>
+                </div>
+            </div>
         </div>
       </div>
    )
