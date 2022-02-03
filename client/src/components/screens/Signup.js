@@ -80,7 +80,7 @@ const SignIn  = ()=>{
             >
                 Log in with facebook
             </button>
-            <h6 >---------------     OR     ----------------</h6>
+            <h6 className="orline">---------------     OR     ----------------</h6>
             
             <form className='formstyle'>
                 <input
@@ -107,22 +107,23 @@ const SignIn  = ()=>{
                 />
             </form>
             <div className="file-field input-field">
-            <div className="btn">
-            {/* #64b5f6 blue darken-1 */}
-                <span>Upload pic</span>
+            <div className="btnuploadphoto">
+                <span>Upload picture</span>
                 <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
             </div>
             <div className="file-path-wrapper">
-                <input className="file-path validate" type="text" />
+                <input className="file-path validate" type="text" placeholder="Choose a picture from gallery"/>
             </div>
             </div>
             <button className="btn"
             onClick={()=>PostData()}
             >
-                 {/* waves-effect waves-light #64b5f6 blue darken-1 */}
-                SignUP
+                 {/* waves-effect waves-light darken-1 */}
+                Sign UP
             </button>
-            <h6 classname="tnc">By signing up, you agree to <h6 className="textbold">our Terms , Data Policy</h6> and <h6 className="textbold">Cookies Policy</h6> .</h6>
+            <div classname="tnc">
+                <h6 classname="tnctext">By signing up, you agree to <h6 className="textbold">our Terms , Data Policy</h6> and <h6 className="textbold">Cookies Policy</h6> .</h6>
+            </div>
         </div>
         <div className="card2">
         <div className="rowcard2">

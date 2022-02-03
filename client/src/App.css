@@ -20,6 +20,10 @@ a{
   margin: 10px auto;
 }
 
+.orline{
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
 .input-field input[type=text]:focus {
   border-bottom: 1px solid rgb(8, 93, 252) !important;
   box-shadow: 0 1px 0 0 rgb(8, 93, 252)  !important;
@@ -45,11 +49,19 @@ a{
   /* text-decoration-line: line-through; */
   background-color: blue;
 }
-
 .tnc{
+  margin: 20px;
+  margin-top: 2px;
+  width: 400px;
+}
+.tnctext{
   color: gray;
   margin: 20px;
   margin-top: 2px;
+}
+.textbold
+{
+  font-weight: 700;
 }
 
 .rowcard2 {
@@ -83,6 +95,18 @@ a{
   width:90%;
   border-radius: 6px;
 }
+
+.btnuploadphoto{
+  background-color: rgb(17, 167, 226);
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  width:40%;
+  height: 30px;
+  padding-top: 4px;
+  border-radius: 4px;
+}
+
 .welcometext
 {
   color: gray;
