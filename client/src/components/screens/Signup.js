@@ -80,7 +80,7 @@ const SignIn  = ()=>{
             >
                 Log in with facebook
             </button>
-            <h6 className="orline">---------------     OR     ----------------</h6>
+            <h6 className="orline">--------------- OR ----------------</h6>
             
             <form className='formstyle'>
                 <input
@@ -118,11 +118,10 @@ const SignIn  = ()=>{
             <button className="btn"
             onClick={()=>PostData()}
             >
-                 {/* waves-effect waves-light darken-1 */}
                 Sign UP
             </button>
-            <div classname="tnc">
-                <h6 classname="tnctext">By signing up, you agree to <h6 className="textbold">our Terms , Data Policy</h6> and <h6 className="textbold">Cookies Policy</h6> .</h6>
+            <div className="termncond">
+                <h6 >By signing up, you agree to our Terms , Data Policy and Cookies Policy .</h6>
             </div>
         </div>
         <div className="card2">

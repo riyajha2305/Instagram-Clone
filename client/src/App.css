@@ -21,6 +21,7 @@ a{
 }
 
 .orline{
+  color:gray;
   margin-top: 6px;
   margin-bottom: 16px;
 }
@@ -35,35 +36,28 @@ a{
 
 .formstyle{
   width: 90%;
+  height: 49px;
   padding-left: 8px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 4px; 
   margin-left: 20px;
   resize: vertical 
 }
-
-.forcolor{
-  /* text-decoration-line: line-through; */
-  background-color: blue;
+.textcolor{
+  color: rgb(8, 8, 139);
 }
-.tnc{
-  margin: 20px;
-  margin-top: 2px;
-  width: 400px;
-}
-.tnctext{
-  color: gray;
-  margin: 20px;
-  margin-top: 2px;
+.termncond{
+  width: 100%;
+  color:rgb(151, 150, 150);
+  padding-left: 10px;
 }
 .textbold
 {
-  font-weight: 700;
+  font-weight: 70px;
 }
-
 .rowcard2 {
   display: flex;
   padding-left: 40px;
@@ -110,6 +104,8 @@ a{
 .welcometext
 {
   color: gray;
+  font-size:medium;
+  font-weight:bold;
   margin: 20px;
   margin-top: 2px;
 }
