@@ -72,9 +72,9 @@ const SignIn  = ()=>{
       <div className="mycard">
           <div className="card auth-card input-field">
             <h2>Instagram</h2>
-            <h5 className="welcometext">
+            <h6 className="welcometext">
             Sign up to see photos and videos from your friends.
-            </h5>
+            </h6>
             <button className="btn"
             onClick={()=>PostData()}
             >
@@ -85,17 +85,17 @@ const SignIn  = ()=>{
             <form className='formstyle'>
                 <input
                 type="text"
-                placeholder="name"
-                value={name}
-                onChange={(e)=>setName(e.target.value)}
+                placeholder="email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
                 />
             </form>
             <form className='formstyle'>
                 <input
                 type="text"
-                placeholder="email"
-                value={email}
-                onChange={(e)=>setEmail(e.target.value)}
+                placeholder="name"
+                value={name}
+                onChange={(e)=>setName(e.target.value)}
                 />
             </form>
             <form className='formstyle'>
@@ -122,22 +122,31 @@ const SignIn  = ()=>{
                  {/* waves-effect waves-light #64b5f6 blue darken-1 */}
                 SignUP
             </button>
-            <h6>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</h6>
+            <h6 classname="tnc">By signing up, you agree to <h6 className="textbold">our Terms , Data Policy</h6> and <h6 className="textbold">Cookies Policy</h6> .</h6>
         </div>
         <div className="card2">
-            <h6>
-            <Link to="/signin">Already have an account ? Log In</Link>
-            </h6>
+        <div className="rowcard2">
+                <div class="columncard2">
+                    <h6>
+                    <Link to="/signin">Already have an account ?</Link>
+                    </h6>
+                </div>
+                <div class="columncard2">
+                    <h6>
+                    <Link to="/signin"><h6 className="signbtn">Log In</h6></Link>
+                    </h6>
+                </div>
+            </div>
         </div>
         <div className="getapp">
-            <h5>Get the app</h5>
-            <div className="row">
-                <div class="column">
+            <h6>Get the app</h6>
+            <div className="rowgetapp">
+                <div class="columngetapp">
                     <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
                      alt="AppStore" width="150" 
                      height="40"/>
                 </div>
-                <div class="column">
+                <div class="columngetapp">
                     <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" 
                     alt="GooglePlay"  width="150" 
                     height="40"/>

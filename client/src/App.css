@@ -41,11 +41,28 @@ a{
   resize: vertical 
 }
 
-.row {
+.forcolor{
+  /* text-decoration-line: line-through; */
+  background-color: blue;
+}
+
+.tnc{
+  color: gray;
+  margin: 20px;
+  margin-top: 2px;
+}
+
+.rowcard2 {
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: space-evenly;
+}
+.rowgetapp {
   display: flex;
 }
 
-.column {
+.columngetapp {
   flex: 50%;
   padding: 20px;
 }
@@ -56,23 +73,25 @@ a{
     margin: 2px auto;
     
 }
+
 .btn{
   /* waves-effect waves-light #64b5f6 blue darken-1  */
+  background-color: rgb(17, 167, 226);
   margin-top: 10px;
   margin-bottom: 8px;
   margin-left: 7px;
   width:90%;
   border-radius: 6px;
 }
-.forcolor{
-  /* text-decoration-line: line-through; */
-  color: blue;
-}
 .welcometext
 {
   color: gray;
   margin: 20px;
   margin-top: 2px;
+}
+
+.signbtn{
+  color: rgb(0, 110, 255);
 }
 .card2{
     border: 2px solid #ccc;
