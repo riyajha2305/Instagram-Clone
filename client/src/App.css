@@ -11,8 +11,10 @@ a{
 .mycard{
   margin-top: 30px;
 }
+
 .auth-card{
   padding: 20px;
+  padding-top: 1px;
   text-align: center;
   max-width: 400px;
   margin: 10px auto;
@@ -25,6 +27,114 @@ a{
 .input-field input[type=password]:focus {
   border-bottom: 1px solid rgb(8, 93, 252) !important;
   box-shadow: 0 1px 0 0 rgb(8, 93, 252)  !important;
+}
+
+.formstyle{
+  width: 90%;
+  height: 49px;
+  padding-left: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 4px; 
+  margin-left: 20px;
+  resize: vertical 
+}
+
+.btn{
+  /* waves-effect waves-light #64b5f6 blue darken-1  */
+  background-color: rgb(17, 167, 226);
+  margin-top: 10px;
+  margin-bottom: 8px;
+  margin-left: 7px;
+  width:90%;
+  border-radius: 6px;
+}
+
+.btnuploadphoto{
+  background-color: rgb(17, 167, 226);
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  width:40%;
+  height: 30px;
+  padding-top: 4px;
+  border-radius: 4px;
+}
+
+.welcometext
+{
+  color: gray;
+  font-size:medium;
+  font-weight:bold;
+  margin: 20px;
+  margin-top: 2px;
+}
+
+.orline{
+  color:gray;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.textcolor1{
+  color: rgb(12, 12, 105);
+  font-size:medium;
+  font-weight:bold;
+}
+.textcolor2{
+  color: rgb(13, 13, 133);
+  font-size:medium;
+}
+.termncond{
+  width: 100%;
+  color:rgb(151, 150, 150);
+  padding-left: 10px;
+}
+
+.card2{
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+.rowcard1
+{
+  display: flex;
+  padding-left: 80px;
+  padding-right: 60px;
+  justify-content: space-evenly;
+}
+.rowcard2 {
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: space-evenly;
+}
+
+.signbtn{
+  color: rgb(0, 110, 255);
+}
+
+.rowgetapp {
+  display: flex;
+}
+
+.columngetapp {
+  flex: 50%;
+  padding: 20px;
+}
+
+.getapp{
+    padding: 10px;
+    text-align: center;
+    max-width: 400px;
+    margin: 2px auto;
+    
 }
 
 .gallery{
@@ -43,17 +153,16 @@ a{
   margin: 26px auto;
   
 }
+
 .collection-item{
   width: 100%;
 }
-
 
 #toast-container{
   top:30px !important;
   right: 20px !important;
   left: auto !important;
 }
-
 
 .material-icons:hover{
   cursor: pointer;
