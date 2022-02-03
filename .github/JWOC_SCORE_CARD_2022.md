@@ -22,4 +22,11 @@ Difficulty level : Hard | Hard<br>
 Points : 10<br>
 Github Profile : https://github.com/dhruvtongia<br>
 
+## Name : Shreshtha Sadhu<br>
+Issue number : #26<br>
+Difficulty level : Hard<br>
+Points : 5<br>
+Github Profile : https://github.com/Shresa<br>
+
+
 Keep Contributing !!!🥳
