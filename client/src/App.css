@@ -20,11 +20,6 @@ a{
   margin: 10px auto;
 }
 
-.orline{
-  color:gray;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
 .input-field input[type=text]:focus {
   border-bottom: 1px solid rgb(8, 93, 252) !important;
   box-shadow: 0 1px 0 0 rgb(8, 93, 252)  !important;
@@ -45,39 +40,6 @@ a{
   margin-bottom: 4px; 
   margin-left: 20px;
   resize: vertical 
-}
-.textcolor{
-  color: rgb(8, 8, 139);
-}
-.termncond{
-  width: 100%;
-  color:rgb(151, 150, 150);
-  padding-left: 10px;
-}
-.textbold
-{
-  font-weight: 70px;
-}
-.rowcard2 {
-  display: flex;
-  padding-left: 40px;
-  padding-right: 40px;
-  justify-content: space-evenly;
-}
-.rowgetapp {
-  display: flex;
-}
-
-.columngetapp {
-  flex: 50%;
-  padding: 20px;
-}
-.getapp{
-    padding: 10px;
-    text-align: center;
-    max-width: 400px;
-    margin: 2px auto;
-    
 }
 
 .btn{
@@ -110,17 +72,69 @@ a{
   margin-top: 2px;
 }
 
+.orline{
+  color:gray;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.textcolor1{
+  color: rgb(12, 12, 105);
+  font-size:medium;
+  font-weight:bold;
+}
+.textcolor2{
+  color: rgb(13, 13, 133);
+  font-size:medium;
+}
+.termncond{
+  width: 100%;
+  color:rgb(151, 150, 150);
+  padding-left: 10px;
+}
+
+.card2{
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+.rowcard1
+{
+  display: flex;
+  padding-left: 80px;
+  padding-right: 60px;
+  justify-content: space-evenly;
+}
+.rowcard2 {
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: space-evenly;
+}
+
 .signbtn{
   color: rgb(0, 110, 255);
 }
-.card2{
-    border: 2px solid #ccc;
-    border-radius: 2px;
-    margin: 0;
-    padding: 12px;
+
+.rowgetapp {
+  display: flex;
+}
+
+.columngetapp {
+  flex: 50%;
+  padding: 20px;
+}
+
+.getapp{
+    padding: 10px;
     text-align: center;
     max-width: 400px;
-    margin: 20px auto;
+    margin: 2px auto;
+    
 }
 
 .gallery{
@@ -139,17 +153,16 @@ a{
   margin: 26px auto;
   
 }
+
 .collection-item{
   width: 100%;
 }
-
 
 #toast-container{
   top:30px !important;
   right: 20px !important;
   left: auto !important;
 }
-
 
 .material-icons:hover{
   cursor: pointer;
