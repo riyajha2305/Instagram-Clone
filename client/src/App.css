@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
 
-a{
+a {
   color: black !important;
 }
 
-.brand-logo,h2{
-  font-family: 'Grand Hotel', cursive;
+.brand-logo,
+h2 {
+  font-family: "Grand Hotel", cursive;
 }
 
-.mycard{
+.mycard {
   margin-top: 30px;
 }
 
-.auth-card{
+.auth-card {
   padding: 20px;
   padding-top: 1px;
   text-align: center;
@@ -20,16 +21,16 @@ a{
   margin: 10px auto;
 }
 
-.input-field input[type=text]:focus {
+.input-field input[type="text"]:focus {
   border-bottom: 1px solid rgb(8, 93, 252) !important;
-  box-shadow: 0 1px 0 0 rgb(8, 93, 252)  !important;
+  box-shadow: 0 1px 0 0 rgb(8, 93, 252) !important;
 }
-.input-field input[type=password]:focus {
+.input-field input[type="password"]:focus {
   border-bottom: 1px solid rgb(8, 93, 252) !important;
-  box-shadow: 0 1px 0 0 rgb(8, 93, 252)  !important;
+  box-shadow: 0 1px 0 0 rgb(8, 93, 252) !important;
 }
 
-.formstyle{
+.formstyle {
   width: 90%;
   height: 49px;
   padding-left: 8px;
@@ -37,63 +38,62 @@ a{
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
   margin-left: 20px;
-  resize: vertical 
+  resize: vertical;
 }
 
-.btn{
+.btn {
   /* waves-effect waves-light #64b5f6 blue darken-1  */
   background-color: rgb(17, 167, 226);
   margin-top: 10px;
   margin-bottom: 8px;
   margin-left: 7px;
-  width:90%;
+  width: 90%;
   border-radius: 6px;
 }
 
-.btnuploadphoto{
+.btnuploadphoto {
   background-color: rgb(17, 167, 226);
   color: white;
   margin-top: 10px;
   margin-left: 20px;
-  width:40%;
+  width: 40%;
   height: 30px;
   padding-top: 4px;
   border-radius: 4px;
 }
 
-.welcometext
-{
+.welcometext {
   color: gray;
-  font-size:medium;
-  font-weight:bold;
+  font-size: medium;
+  font-weight: bold;
   margin: 20px;
   margin-top: 2px;
 }
 
-.orline{
-  color:gray;
+.orline {
+  color: gray;
   margin-top: 6px;
   margin-bottom: 16px;
 }
 
-.textcolor1{
+.textcolor1 {
   color: rgb(12, 12, 105);
-  font-size:medium;
-  font-weight:bold;
+  font-size: medium;
+  font-weight: bold;
 }
-.textcolor2{
+.textcolor2 {
   color: rgb(13, 13, 133);
-  font-size:medium;
+  font-size: medium;
 }
-.termncond{
+.termncond {
   width: 100%;
-  color:rgb(151, 150, 150);
+  color: rgb(151, 150, 150);
   padding-left: 10px;
 }
 
-.card2{
+.card2 {
   border: 2px solid #ccc;
   border-radius: 2px;
   margin: 0;
@@ -102,8 +102,7 @@ a{
   max-width: 400px;
   margin: 20px auto;
 }
-.rowcard1
-{
+.rowcard1 {
   display: flex;
   padding-left: 80px;
   padding-right: 60px;
@@ -116,7 +115,7 @@ a{
   justify-content: space-evenly;
 }
 
-.signbtn{
+.signbtn {
   color: rgb(0, 110, 255);
 }
 
@@ -129,41 +128,54 @@ a{
   padding: 20px;
 }
 
-.getapp{
-    padding: 10px;
-    text-align: center;
-    max-width: 400px;
-    margin: 2px auto;
-    
+.getapp {
+  padding: 10px;
+  text-align: center;
+  max-width: 400px;
+  margin: 2px auto;
 }
 
-.gallery{
+.gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.item{
+.item {
   width: 30%;
 }
 
-.home-card{
+.home-card {
   max-width: 500px;
   height: max-content;
   margin: 26px auto;
-  
 }
 
-.collection-item{
+.collection-item {
   width: 100%;
 }
 
-#toast-container{
-  top:30px !important;
+#toast-container {
+  top: 30px !important;
   right: 20px !important;
   left: auto !important;
 }
 
-.material-icons:hover{
+.material-icons:hover {
   cursor: pointer;
+}
+
+.card-user-details {
+  display: flex;
+  width: fit-content;
+  height: 60px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 8px 10px 0px 10px;
+}
+.card-user-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 80px;
+  border: 1px black solid;
 }
