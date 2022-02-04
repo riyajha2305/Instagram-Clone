@@ -102,7 +102,6 @@ run the script at the first level:
 ### Start
 
 ```terminal
-$ cd myproject  // go to server folder
 $ npm i       // npm install packages
 $ nodemon app // this will run the server side app
 ```
