@@ -85,7 +85,7 @@ const SignIn  = ()=>{
             <form className='formstyle'>
                 <input
                 type="text"
-                placeholder="email"
+                placeholder="Email"
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 />
@@ -93,7 +93,7 @@ const SignIn  = ()=>{
             <form className='formstyle'>
                 <input
                 type="text"
-                placeholder="name"
+                placeholder="Name"
                 value={name}
                 onChange={(e)=>setName(e.target.value)}
                 />
@@ -101,7 +101,7 @@ const SignIn  = ()=>{
             <form className='formstyle'>
                 <input
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 value={password}
                 onChange={(e)=>setPasword(e.target.value)}
                 />

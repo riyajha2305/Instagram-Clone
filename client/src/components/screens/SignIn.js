@@ -2,6 +2,7 @@ import React,{useState,useContext,} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import {UserContext} from '../../App'
 import M from 'materialize-css'
+import "./FontStyles.css";
 const SignIn  = ()=>{
     const {state,dispatch} = useContext(UserContext)
     const history = useHistory()
@@ -45,7 +46,7 @@ const SignIn  = ()=>{
             <form className='formstyle'>
                 <input
                 type="text"
-                placeholder="email"
+                placeholder="Email"
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 />

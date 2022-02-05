@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useContext} from 'react'
 import {UserContext} from '../../App'
 import {Link} from 'react-router-dom'
+import "./FontStyles.css"
 const Home  = ()=>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
@@ -150,7 +151,7 @@ const Home  = ()=>{
                        <div className="card home-card" key={item._id}>
                             <div className="card-user-details">
                             <Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }><img className="card-user-pic" src={item.postedBy.pic}/></Link>
-                        <h5 style={{padding:"5px",position:"relative",bottom:"10px",fontFamily:"Times New Roman"}}><Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }>{item.postedBy.name}</Link>{item.postedBy._id == state._id 
+                        <h5 style={{padding:"5px",position:"relative",bottom:"10px"}}><Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }>{item.postedBy.name}</Link>{item.postedBy._id == state._id 
                             && <i className="material-icons" style={{
                                 float:"right"
                             }}
@@ -175,9 +176,9 @@ const Home  = ()=>{
                             }
                             
                            
-                                <h6>{item.likes.length} likes</h6>
-                                <h6>{item.title}</h6>
-                                <p>{item.body}</p>
+                                <h6 class = "like-count">{item.likes.length} likes</h6>
+                                <h6 class = "post-title">{item.title}</h6>
+                                <p class = "post-body">{item.body}</p>
                                 {
                                     item.comments.map(record=>{
                                         return(
@@ -194,7 +195,7 @@ const Home  = ()=>{
                                     e.preventDefault()
                                     makeComment(e.target[0].value,item._id)
                                 }}>
-                                  <input type="text" placeholder="add a comment" />  
+                                  <input type="text" placeholder="Add a comment..." />  
                                 </form>
                                 
                             </div>
