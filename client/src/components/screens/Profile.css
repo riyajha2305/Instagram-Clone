@@ -73,6 +73,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .top-line {
@@ -90,7 +91,38 @@
 }
 
 .gallery > * {
-  width: 280px;
+  width: 100%;
+}
+
+.user-unfollow,
+.user-follow {
+  height: 45px;
+  width: 300px;
+  background-color: transparent;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: none;
+  border: 1px solid black !important;
+  text-transform: capitalize;
+}
+.user-follow {
+  background-color: #0095f6;
+  color: white;
+  border: none !important;
+  box-shadow: none;
+}
+.user-follow:hover {
+  background-color: #0095f6;
+}
+.user-unfollow:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+.user-unfollow:focus,
+.user-follow:focus {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 @media only screen and (max-width: 820px) {
@@ -99,7 +131,6 @@
   }
   .gallery {
     width: 50rem;
-    background-color: antiquewhite;
   }
   .gallery > * {
     width: 222px;
