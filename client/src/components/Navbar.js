@@ -19,9 +19,9 @@ const NavBar = ()=>{
      const renderList = ()=>{
        if(state){
            return [
-            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
-            <li key="2" ><Link to="/profile" ><i ><BsPersonCircle size=" 1.75rem"  /></i></Link></li>,
-            <li key="3"><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
+            <li key="1"><i data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
+            <li key="2"><Link to="/profile"><i><BsPersonCircle size=" 1.75rem"  /></i></Link></li>,
+            <li key="3"><Link to="/create"><i><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
             <li key="4"><Link to="/myfollowingpost"><i><HiUsers size=" 1.75rem"  /></i></Link></li>,
             <li  key="5">
              <button className="btn #c62828 red darken-3"
