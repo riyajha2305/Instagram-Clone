@@ -5,7 +5,7 @@ import M from 'materialize-css'
 //icons
 import { BsPersonCircle,BsPlusSquare,BsSearch } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi";
-
+import "./screens/FontStyles.css"
 
 const NavBar = ()=>{
     const  searchModal = useRef(null)
@@ -39,8 +39,8 @@ const NavBar = ()=>{
            ]
        }else{
          return [
-          <li  key="6"><Link to="/signin">Signin</Link></li>,
-          <li  key="7"><Link to="/signup">Signup</Link></li>
+          <li  key="6"><Link to="/signin">Sign in</Link></li>,
+          <li  key="7"><Link to="/signup">Sign up</Link></li>
          
          ]
        }

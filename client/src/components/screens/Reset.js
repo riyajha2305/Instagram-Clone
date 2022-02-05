@@ -36,7 +36,7 @@ const Reset  = ()=>{
             <h2>Instagram</h2>
             <input
             type="text"
-            placeholder="email"
+            placeholder="Email"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             />
