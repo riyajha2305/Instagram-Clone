@@ -6,7 +6,7 @@
   
 ## Name :  Swetank Srivastava<br>
 Issue number : #17<br>
-Difficulty level : Intermediate<br>
+Difficulty level : Medium<br>
 Points : 3<br>
 Github Profile : https://github.com/stubborn-1508<br>
 
@@ -30,7 +30,7 @@ Github Profile : https://github.com/Shresa<br>
 
 ## Name : Tejaswi<br>
 Issue number : #30 | #32<br>
-Difficulty level : Hard | Intermediate<br>
+Difficulty level : Hard | Medium<br>
 Points : 8<br>
 Github Profile : https://github.com/Tess-Vanta<br>
 
