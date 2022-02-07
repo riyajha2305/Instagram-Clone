@@ -100,8 +100,8 @@ router.post("/googleSignup", (req, res) => {
     .verifyIdToken({ idToken: tokenId, audience: GOOGLE_CLIENT_ID })
     .then((ticket) => ticket.getPayload())
     .then((payload) => {
-      const { email, name, picture } = payload;
-      User.findOne({ email: email }).then((savedUser) => {
+      const { id, email, name, picture } = payload;
+      User.findOne({ googleId: id, email: email }).then((savedUser) => {
         if (savedUser) {
           return res
             .status(422)
@@ -111,6 +111,7 @@ router.post("/googleSignup", (req, res) => {
           email,
           name,
           pic: picture,
+          googleId: id,
         });
 
         user
@@ -134,8 +135,8 @@ router.post("/googleSignin", (req, res) => {
     .verifyIdToken({ idToken: tokenId, audience: GOOGLE_CLIENT_ID })
     .then((ticket) => ticket.getPayload())
     .then((payload) => {
-      const { email } = payload;
-      User.findOne({ email: email }).then((savedUser) => {
+      const { id, email } = payload;
+      User.findOne({ googleId: id, email: email }).then((savedUser) => {
         if (!savedUser) {
           return res.status(422).json({ error: "Invalid Email or password" });
         }
