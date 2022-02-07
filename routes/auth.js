@@ -11,6 +11,7 @@ const nodemailer = require("nodemailer");
 const sendgridTransport = require("nodemailer-sendgrid-transport");
 const { SENDGRID_API, EMAIL } = require("../config/keys2");
 const { OAuth2Client } = require("google-auth-library");
+const { default: axios } = require("axios");
 
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 
@@ -140,13 +141,76 @@ router.post("/googleSignin", (req, res) => {
         }
         const token = jwt.sign({ _id: savedUser._id }, JWT_SECRET);
         const { _id, name, email, followers, following, pic } = savedUser;
-        console.log(token, savedUser);
         return res.send({
           token,
           user: { _id, name, email, followers, following, pic },
         });
       });
     });
+});
+
+router.post("/facebookSignup", (req, res) => {
+  const { userId, accessToken } = req.body;
+
+  const urlGraphFacebook = `https://graph.facebook.com/v2.11/${userId}/?fields=id,name,email,picture&access_token=${accessToken}`;
+
+  axios
+    .get(urlGraphFacebook)
+    .then((payload) => {
+      const {
+        id,
+        email,
+        name,
+        picture: { url: pic },
+      } = payload.data;
+      User.findOne({ facebookId: id }).then((savedUser) => {
+        if (savedUser) {
+          return res
+            .status(422)
+            .json({ error: "user already exists with that email" });
+        }
+        const user = new User({
+          email,
+          name,
+          pic,
+          facebookId: id,
+        });
+
+        user
+          .save()
+          .then((user) => {
+            return res.json({ message: "saved successfully" });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+router.post("/facebookSignin", (req, res) => {
+  const { userId, accessToken } = req.body;
+
+  const urlGraphFacebook = `https://graph.facebook.com/v2.11/${userId}/?fields=id,name,email,picture&access_token=${accessToken}`;
+
+  axios.get(urlGraphFacebook).then((payload) => {
+    const { id, email } = payload.data;
+    console.log(id, email);
+    User.findOne({ facebookId: id, email: email }).then((savedUser) => {
+      if (!savedUser) {
+        return res.status(422).json({ error: "Invalid Login" });
+      }
+      const token = jwt.sign({ _id: savedUser._id }, JWT_SECRET);
+      const { _id, name, email, followers, following, pic } = savedUser;
+      return res.send({
+        token,
+        user: { _id, name, email, followers, following, pic },
+      });
+    });
+  });
 });
 
 router.post("/reset-password", (req, res) => {

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
 import GoogleLogin from "react-google-login";
+import FacebookLogin from "react-facebook-login";
+
 const SignIn = () => {
   const history = useHistory();
   const [name, setName] = useState("");
@@ -93,7 +95,6 @@ const SignIn = () => {
     })
       .then((data) => data.json())
       .then((data) => {
-        console.log(data, data.error);
         if (data.error) {
           M.toast({ html: data.error, classes: "#c62828 red darken-3" });
         } else {
@@ -104,6 +105,32 @@ const SignIn = () => {
           history.push("/signin");
         }
       });
+  };
+
+  const facebookSignup = (res) => {
+    fetch("/facebookSignup", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: res.userID,
+        accessToken: res.accessToken,
+      }),
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.error) {
+          M.toast({ html: data.error, classes: "#c62828 red darken-3" });
+        } else {
+          M.toast({
+            html: "Sign up successfully",
+            classes: "#43a047 green darken-1",
+          });
+          history.push("/signin");
+        }
+      })
+      .catch((e) => console.log(e));
   };
 
   return (
@@ -155,6 +182,11 @@ const SignIn = () => {
             />
           </div>
         </div>
+        <FacebookLogin
+          appId={process.env.REACT_APP_FACEBOOK_CLIENT_ID}
+          callback={facebookSignup}
+          fields="name,email,picture"
+        />
         <GoogleLogin
           clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
           buttonText="Sign up with google"
