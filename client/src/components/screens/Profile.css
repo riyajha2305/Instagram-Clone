@@ -21,7 +21,7 @@
   margin-bottom: 3rem;
 }
 .top-container h6 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 .info {
   width: 50%;
@@ -31,8 +31,8 @@
   justify-content: space-evenly;
 }
 .profile-pic {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   object-fit: cover;
   border-radius: 50%;
 }
