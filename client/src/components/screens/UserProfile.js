@@ -2,6 +2,7 @@ import React,{useEffect,useState,useContext} from 'react'
 import {UserContext} from '../../App'
 import {useParams} from 'react-router-dom'
 import "./UserProfile.css"
+import ".Profile.css"
 const Profile  = ()=>{
     const [userProfile,setProfile] = useState(null)
     
@@ -73,36 +74,33 @@ const Profile  = ()=>{
                          ...prevState.user,
                          followers:newFollower
                         }
-                 }
-             })
-             setShowFollow(true)
-             
-        })
-    }
-   return (
-       <>
-       {userProfile ?
-       <div class = "user-info">
-           <div class = "posts">
-               <div>
-                   <img class = "profile-pic" src={userProfile.user.pic}/>
-               </div>
-               <div class = "user-details">
-                   <h4>{userProfile.user.name}</h4>
-                   <h5>{userProfile.user.email}</h5>
-                   <div class = "user-stats">
-                       <h6>{userProfile.posts.length} posts</h6>
-                       <h6>{userProfile.user.followers.length} followers</h6>
-                       <h6>{userProfile.user.following.length} following</h6>
-                   </div>
-                   {showfollow?
-                   <button className="btn waves-effect waves-light #64b5f6 blue darken-1 follow-button"
-                    onClick={()=>followUser()}
+                 };
+        });
+        setShowFollow(true);
+      });
+  };
+  return (
+    <>
+      {userProfile ? (
+        <div className="profile">
+          <div className="main">
+            <div className="top-container">
+              <div>
+                <img className="profile-pic" src={userProfile.user.pic} />
+              </div>
+              <div className="info">
+                <div className="profile-name">
+                  <h4 className="top-line">{userProfile.user.name}</h4>
+
+                  {showfollow ? (
+                    <button
+                      className="btn user-follow"
+                      onClick={() => followUser()}
                     >
                         Follow
                     </button>
                     : 
-                    <button className="btn waves-effect waves-light #64b5f6 blue darken-1 unfollow-button"
+                    <button className="btn user-unfollow"
                     onClick={()=>unfollowUser()}
                     >
                         UnFollow
