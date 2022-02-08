@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
+
+.user-details h4{
+    font-family: Nunito Sans;
+}
+.user-details h6{
+    font-family: Source Sans Pro;
+    font-weight: bold;
+}
+.user-info{
+    max-width: 550px;
+    margin: 0px auto;
+}
+.posts{
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0px ;
+    border-bottom: 1px solid grey;
+}
+.profile-pic{
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+}
+.user-stats{
+    display: flex;
+    justify-content:space-between;
+    width: 108%;
+}
+.follow-button{
+    margin: 10px;
+}
+.unfollow-button{
+    margin: 10px;
+}
+
+

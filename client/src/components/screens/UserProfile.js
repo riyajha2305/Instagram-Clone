@@ -1,7 +1,7 @@
 import React,{useEffect,useState,useContext} from 'react'
 import {UserContext} from '../../App'
 import {useParams} from 'react-router-dom'
-import "./FontStyles.css"
+import "./UserProfile.css"
 const Profile  = ()=>{
     const [userProfile,setProfile] = useState(null)
     
@@ -82,40 +82,27 @@ const Profile  = ()=>{
    return (
        <>
        {userProfile ?
-       <div style={{maxWidth:"550px",margin:"0px auto"}}>
-           <div style={{
-               display:"flex",
-               justifyContent:"space-around",
-               margin:"18px 0px",
-               borderBottom:"1px solid grey"
-           }}>
+       <div class = "user-info">
+           <div class = "posts">
                <div>
-                   <img style={{width:"160px",height:"160px",borderRadius:"80px"}}
-                   src={userProfile.user.pic}
-                   />
+                   <img class = "profile-pic" src={userProfile.user.pic}/>
                </div>
                <div class = "user-details">
                    <h4>{userProfile.user.name}</h4>
                    <h5>{userProfile.user.email}</h5>
-                   <div style={{display:"flex",justifyContent:"space-between",width:"108%"}}>
+                   <div class = "user-stats">
                        <h6>{userProfile.posts.length} posts</h6>
                        <h6>{userProfile.user.followers.length} followers</h6>
                        <h6>{userProfile.user.following.length} following</h6>
                    </div>
                    {showfollow?
-                   <button style={{
-                       margin:"10px"
-                   }} className="btn waves-effect waves-light #64b5f6 blue darken-1"
+                   <button className="btn waves-effect waves-light #64b5f6 blue darken-1 follow-button"
                     onClick={()=>followUser()}
                     >
                         Follow
                     </button>
                     : 
-                    <button
-                    style={{
-                        margin:"10px"
-                    }}
-                    className="btn waves-effect waves-light #64b5f6 blue darken-1"
+                    <button className="btn waves-effect waves-light #64b5f6 blue darken-1 unfollow-button"
                     onClick={()=>unfollowUser()}
                     >
                         UnFollow

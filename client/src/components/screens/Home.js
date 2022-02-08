@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useContext} from 'react'
 import {UserContext} from '../../App'
 import {Link} from 'react-router-dom'
-import "./FontStyles.css"
+import "./Home.css"
 const Home  = ()=>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
@@ -150,11 +150,9 @@ const Home  = ()=>{
                    return(
                        <div className="card home-card" key={item._id}>
                             <div className="card-user-details">
-                            <Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }><img className="card-user-pic" src={item.postedBy.pic}/></Link>
-                        <h5 style={{padding:"5px",position:"relative",bottom:"10px"}}><Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }>{item.postedBy.name}</Link>{item.postedBy._id == state._id 
-                            && <i className="material-icons" style={{
-                                float:"right"
-                            }}
+                            <Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"}><img className="card-user-pic" src={item.postedBy.pic}/></Link>
+                        <h5><Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"}>{item.postedBy.name}</Link>{item.postedBy._id == state._id 
+                            && <i className="material-icons delete-post"
                             onClick={()=>deletePost(item._id)}
                             >delete</i>
 
@@ -163,7 +161,7 @@ const Home  = ()=>{
                                 <img src={item.photo}/>
                             </div>
                             <div className="card-content">
-                            <i className="material-icons" style={{color:"red"}}>favorite</i>
+                            <i className="material-icons favorite">favorite</i>
                             {item.likes.includes(state._id)
                             ? 
                              <i className="material-icons"
@@ -183,9 +181,7 @@ const Home  = ()=>{
                                     item.comments.map(record=>{
                                         return(
                         
-                                        <h6 key={record._id}><span style={{fontWeight:"500"}}>{record.postedBy.name}</span> {record.text}{record.postedBy._id==state._id&&<i className="material-icons" style={{
-                                            float:"right"
-                                        }} 
+                                        <h6 key={record._id}><span class = "posted-by">{record.postedBy.name}</span> {record.text}{record.postedBy._id==state._id&&<i className="material-icons delete-comment"
                                         onClick={()=>deleteComment(item._id,record._id)}>delete</i>}</h6>
 
                                         )
