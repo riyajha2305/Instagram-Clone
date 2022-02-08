@@ -1,25 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
 
-/*Profile.js*/
-.profile-stats h6{
-    font-family: Source Sans Pro;
-    font-weight: bold;
-}
-.profile-name{
-    font-family: Nunito Sans;
-}
-
-/*SignIn.js*/
-.input-field h2{
-    font-family: Cookie;
-}
-
-/*Home.js*/
 .card-user-details h5{
     font-family: Roboto;
     font-size: 1.2rem;
     font-weight: bold;
     margin-left: 10px;
+    padding: 5px;
+    position: relative;
+    bottom: 10px;
 }
 .like-count{
     font-size: 1.1rem;
@@ -39,17 +27,15 @@
     margin-right: 13px;
     margin-left: -5px;
 }
-
-/*Navbar.js*/
-.brand-logo{
-    font-family: Cookie;
+.delete-post{
+    float: right;
 }
-
-/*UserProfile.js*/
-.user-details h4{
-    font-family: Nunito Sans;
+.favorite{
+    color: red;
 }
-.user-details h6{
-    font-family: Source Sans Pro;
-    font-weight: bold;
+.posted-by{
+    font-weight: 500;
+}
+.delete-comment{
+    float: right;
 }

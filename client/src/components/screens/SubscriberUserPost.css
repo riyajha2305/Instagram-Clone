@@ -1,0 +1,12 @@
+.card h5{
+    padding: 5px;
+}
+.delete{
+    float: right;
+}
+.favorite{
+    color: red;
+}
+.posted-by{
+    font-weight: 500;
+}
