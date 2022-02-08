@@ -5,15 +5,12 @@ const User = mongoose.model("User");
 const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET, GOOGLE_CLIENT_ID } = require("../config/keys2");
+const { JWT_SECRET } = require("../config/keys2");
 const requireLogin = require("../middleware/requireLogin");
 const nodemailer = require("nodemailer");
 const sendgridTransport = require("nodemailer-sendgrid-transport");
 const { SENDGRID_API, EMAIL } = require("../config/keys2");
-const { OAuth2Client } = require("google-auth-library");
-const { default: axios } = require("axios");
-
-const client = new OAuth2Client(GOOGLE_CLIENT_ID);
+//
 
 const transporter = nodemailer.createTransport(
   sendgridTransport({
@@ -28,14 +25,15 @@ router.post("/signup", (req, res) => {
   if (!email || !password || !name) {
     return res.status(422).json({ error: "please add all the fields" });
   }
-  User.findOne({ email: email })
-    .then((savedUser) => {
-      if (savedUser) {
-        return res
-          .status(422)
-          .json({ error: "user already exists with that email" });
-      }
-      bcrypt.hash(password, 12).then((hashedpassword) => {
+  User.findOne({ email: email }).then((savedUser) => {
+    if (savedUser) {
+      return res
+        .status(422)
+        .json({ error: "user already exists with that email" });
+    }
+    bcrypt
+      .hash(password, 12)
+      .then((hashedpassword) => {
         const user = new User({
           email,
           password: hashedpassword,
@@ -52,41 +50,11 @@ router.post("/signup", (req, res) => {
             //     subject:"signup success",
             //     html:"<h1>welcome to instagram</h1>"
             // })
-            return res.json({ message: "saved successfully" });
+            res.json({ message: "saved successfully" });
           })
           .catch((err) => {
             console.log(err);
           });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-router.post("/signin", (req, res) => {
-  const { email, password } = req.body;
-  if (!email || !password) {
-    return res.status(422).json({ error: "please add email or password" });
-  }
-  User.findOne({ email: email }).then((savedUser) => {
-    if (!savedUser) {
-      return res.status(422).json({ error: "Invalid Email or password" });
-    }
-    bcrypt
-      .compare(password, savedUser.password)
-      .then((doMatch) => {
-        if (doMatch) {
-          // res.json({message:"successfully signed in"})
-          const token = jwt.sign({ _id: savedUser._id }, JWT_SECRET);
-          const { _id, name, email, followers, following, pic } = savedUser;
-          return res.json({
-            token,
-            user: { _id, name, email, followers, following, pic },
-          });
-        } else {
-          return res.status(422).json({ error: "Invalid Email or password" });
-        }
       })
       .catch((err) => {
         console.log(err);
@@ -100,8 +68,8 @@ router.post("/googleSignup", (req, res) => {
     .verifyIdToken({ idToken: tokenId, audience: GOOGLE_CLIENT_ID })
     .then((ticket) => ticket.getPayload())
     .then((payload) => {
-      const { email, name, picture } = payload;
-      User.findOne({ email: email }).then((savedUser) => {
+      const { id, email, name, picture } = payload;
+      User.findOne({ googleId: id, email: email }).then((savedUser) => {
         if (savedUser) {
           return res
             .status(422)
@@ -111,6 +79,7 @@ router.post("/googleSignup", (req, res) => {
           email,
           name,
           pic: picture,
+          googleId: id,
         });
 
         user
@@ -134,8 +103,8 @@ router.post("/googleSignin", (req, res) => {
     .verifyIdToken({ idToken: tokenId, audience: GOOGLE_CLIENT_ID })
     .then((ticket) => ticket.getPayload())
     .then((payload) => {
-      const { email } = payload;
-      User.findOne({ email: email }).then((savedUser) => {
+      const { id, email } = payload;
+      User.findOne({ googleId: id, email: email }).then((savedUser) => {
         if (!savedUser) {
           return res.status(422).json({ error: "Invalid Email or password" });
         }
@@ -210,6 +179,36 @@ router.post("/facebookSignin", (req, res) => {
         user: { _id, name, email, followers, following, pic },
       });
     });
+  });
+});
+
+router.post("/signin", (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    return res.status(422).json({ error: "please add email or password" });
+  }
+  User.findOne({ email: email }).then((savedUser) => {
+    if (!savedUser) {
+      return res.status(422).json({ error: "Invalid Email or password" });
+    }
+    bcrypt
+      .compare(password, savedUser.password)
+      .then((doMatch) => {
+        if (doMatch) {
+          // res.json({message:"successfully signed in"})
+          const token = jwt.sign({ _id: savedUser._id }, JWT_SECRET);
+          const { _id, name, email, followers, following, pic } = savedUser;
+          res.json({
+            token,
+            user: { _id, name, email, followers, following, pic },
+          });
+        } else {
+          return res.status(422).json({ error: "Invalid Email or password" });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
 });
 
