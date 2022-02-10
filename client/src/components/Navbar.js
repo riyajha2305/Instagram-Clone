@@ -5,7 +5,7 @@ import M from 'materialize-css'
 //icons
 import { BsPersonCircle,BsPlusSquare,BsSearch } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi";
-import "./screens/FontStyles.css"
+import "./Navbar.css"
 
 const NavBar = ()=>{
     const  searchModal = useRef(null)
@@ -19,7 +19,7 @@ const NavBar = ()=>{
      const renderList = ()=>{
        if(state){
            return [
-            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
+            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger"><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
             <li key="2" ><Link to="/profile" ><i ><BsPersonCircle size=" 1.75rem"  /></i></Link></li>,
             <li key="3"><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
             <li key="4"><Link to="/myfollowingpost"><i><HiUsers size=" 1.75rem"  /></i></Link></li>,
@@ -71,7 +71,7 @@ const NavBar = ()=>{
   
           </ul>
         </div>
-        <div id="modal1" class="modal" ref={searchModal} style={{color:"black"}}>
+        <div id="modal1" class="modal" ref={searchModal}>
           <div className="modal-content">
           <input
             type="text"

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -40,6 +42,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-family: Source Sans Pro;
+  font-weight: bold;
 }
 .profile-stats span {
   font-weight: bold;
@@ -74,6 +78,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Nunito Sans;
 }
 
 .top-line {

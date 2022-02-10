@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../App";
 import "./Profile.css";
-import "./FontStyles.css"
 
 const Profile = () => {
   const [mypics, setPics] = useState([]);

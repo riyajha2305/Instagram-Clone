@@ -61,12 +61,6 @@ const CreatePost = () => {
   return (
     <div
       className="create-post"
-      style={{
-        margin: "30px auto",
-        maxWidth: "500px",
-        padding: "20px",
-        textAlign: "center",
-      }}
     >
       <div className="create-post_controls">
         <div className="create-post_control">
