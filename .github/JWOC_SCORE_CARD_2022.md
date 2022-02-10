@@ -41,7 +41,7 @@ Points : 5<br>
 Github Profile : https://github.com/57alok<br>
 
 ## Name : Shruti Goyal<br>
-Issue number : #33 | #<br>
+Issue number : #33 | #41<br>
 Difficulty level : Easy | Medium<br>
 Points : 4<br>
 Github Profile : https://github.com/Shruti025<br>
