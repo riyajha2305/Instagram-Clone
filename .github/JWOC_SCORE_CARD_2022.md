@@ -1,7 +1,7 @@
 <h1 align="center">🔥 JWOC SCORE CARD 2K22 🔥</h1> <br>
 <h1 align="center">PROJECT - INSTAGRAM CLONE</h1><br><br>
 
-<h4 align="center"> Total number of Pull Requests so far : 9 | Number of Contributors so far : 7 </h4>
+<h4 align="center"> Total number of Pull Requests so far : 10 | Number of Contributors so far : 7 </h4>
 <br>
   
 ## Name :  Swetank Srivastava<br>
