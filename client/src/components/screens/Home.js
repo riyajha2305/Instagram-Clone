@@ -172,14 +172,14 @@ const Home  = ()=>{
                             }
                             
                            
-                                <h6 class = "like-count">{item.likes.length} likes</h6>
-                                <h6 class = "post-title">{item.title}</h6>
-                                <p class = "post-body">{item.body}</p>
+                                <h6 className = "like-count">{item.likes.length} likes</h6>
+                                <h6 className = "post-title">{item.title}</h6>
+                                <p className = "post-body">{item.body}</p>
                                 {
                                     item.comments.map(record=>{
                                         return(
                         
-                                        <h6 key={record._id}><span class = "posted-by">{record.postedBy.name}</span> {record.text}{record.postedBy._id==state._id&&<i className="material-icons delete-comment"
+                                        <h6 key={record._id}><span className = "posted-by">{record.postedBy.name}</span> {record.text}{record.postedBy._id==state._id&&<i className="material-icons delete-comment"
                                         onClick={()=>deleteComment(item._id,record._id)}>delete</i>}</h6>
 
                                         )

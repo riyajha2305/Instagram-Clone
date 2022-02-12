@@ -71,7 +71,7 @@ const NavBar = ()=>{
   
           </ul>
         </div>
-        <div id="modal1" class="modal" ref={searchModal}>
+        <div id="modal1" className="modal" ref={searchModal}>
           <div className="modal-content">
           <input
             type="text"
