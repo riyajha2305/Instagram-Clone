@@ -1,7 +1,7 @@
 <h1 align="center">🔥 JWOC SCORE CARD 2K22 🔥</h1> <br>
 <h1 align="center">PROJECT - INSTAGRAM CLONE</h1><br><br>
 
-<h4 align="center"> Total number of Pull Requests so far : 10 | Number of Contributors so far : 7 </h4>
+<h4 align="center"> Total number of Pull Requests so far : 12 | Number of Contributors so far : 8 </h4>
 <br>
   
 ## Name :  Swetank Srivastava<br>
@@ -45,6 +45,12 @@ Issue number : #33 | #41<br>
 Difficulty level : Easy | Medium<br>
 Points : 4<br>
 Github Profile : https://github.com/Shruti025<br>
+
+## Name : Harshit<br>
+Issue number : #27 | #15<br>
+Difficulty level : Hard | Hard<br>
+Points : 10<br>
+Github Profile : https://github.com/harshit-070<br>
 
 
 Keep Contributing !!!🥳
