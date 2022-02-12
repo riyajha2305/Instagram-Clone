@@ -1,12 +1,15 @@
 import React,{useState,useEffect} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import M from 'materialize-css'
+import { validEmail, validPassword } from './Regex.jsx';
 const SignIn  = ()=>{
     const history = useHistory()
     const [name,setName] = useState("")
     const [password,setPasword] = useState("")
     const [email,setEmail] = useState("")
     const [image,setImage] = useState("")
+    const [emailErr, setEmailErr] = useState(false);
+    const [pwdError, setPwdError] = useState(false);
     const [url,setUrl] = useState(undefined)
     useEffect(()=>{
         if(url){
@@ -31,10 +34,10 @@ const SignIn  = ()=>{
         })
     }
     const uploadFields = ()=>{
-        if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-            M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
-            return
-        }
+        // if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+        //     M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
+        //     return
+        // }
         fetch("/signup",{
             method:"post",
             headers:{
@@ -64,7 +67,20 @@ const SignIn  = ()=>{
             uploadPic()
         }else{
             uploadFields()
+        
+        var inp_value=document.forms[0].inp_val;
+        var pass_value=document.forms[2].pass_val;
+        if(!validEmail.test(inp_value))
+        {
+              document.forms[0].style.border="2px solid red";
+              setEmailErr(true);
         }
+        if(!validPassword.test(pass_value))
+        {
+              document.forms[2].style.border="2px solid red";
+              setPwdError(true);
+        }
+    }
        
     }
 
@@ -85,11 +101,13 @@ const SignIn  = ()=>{
             <form className='formstyle'>
                 <input
                 type="text"
+                name="inp_val"
                 placeholder="Email"
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 />
             </form>
+            {emailErr && <p style={{color:"red"}}>Your email is invalid</p>}
             <form className='formstyle'>
                 <input
                 type="text"
@@ -98,14 +116,17 @@ const SignIn  = ()=>{
                 onChange={(e)=>setName(e.target.value)}
                 />
             </form>
+
             <form className='formstyle'>
                 <input
                 type="password"
+                name="pass_val"
                 placeholder="Password"
                 value={password}
                 onChange={(e)=>setPasword(e.target.value)}
                 />
             </form>
+            {pwdError && <p style={{color:"red"}}>Your password is invalid</p>}
             <div className="file-field input-field">
             <div className="btnuploadphoto">
                 <span>Upload picture</span>
