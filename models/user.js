@@ -22,8 +22,8 @@ const userSchema = new mongoose.Schema({
   },
   followers: [{ type: ObjectId, ref: "User" }],
   following: [{ type: ObjectId, ref: "User" }],
-  facebookId: { type: String, unique: true },
-  googleId: { type: String, unique: true },
+  facebookId: { type: String },
+  googleId: { type: String },
 });
 
 mongoose.model("User", userSchema);

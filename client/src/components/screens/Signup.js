@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import M from 'materialize-css'
+import ReactFacebookLogin from 'react-facebook-login'
 const SignIn  = ()=>{
     const history = useHistory()
     const [name,setName] = useState("")
@@ -68,6 +69,29 @@ const SignIn  = ()=>{
        
     }
 
+    const responseFacebook = (res)=>{
+     console.log(res)
+        fetch('/facebookSignup',{
+            method:"post",
+            headers: {
+                "Content-Type": "application/json",
+              },
+            body:JSON.stringify( {userId: res.userID , accessToken :res.accessToken} )
+        }).then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if (data.error) {
+              M.toast({ html: data.error, classes: "#c62828 red darken-3" });
+            } else {
+              M.toast({ html: data.message, classes: "#43a047 green darken-1" });
+              history.push("/signin");
+            }
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    }
+
    return (
       <div className="mycard">
           <div className="card auth-card input-field">
@@ -75,11 +99,12 @@ const SignIn  = ()=>{
             <h6 className="welcometext">
             Sign up to see photos and videos from your friends.
             </h6>
-            <button className="btn"
+            {/* <button className="btn"
             onClick={()=>PostData()}
             >
                 Log in with facebook
-            </button>
+            </button> */}
+            <ReactFacebookLogin appId={process.env.REACT_APP_FACEBOOK_CLIENT_ID} callback={responseFacebook} />
             <h6 className="orline">--------------- OR ----------------</h6>
             
             <form className='formstyle'>
