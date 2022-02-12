@@ -5,6 +5,10 @@ import "./Home.css"
 const Home  = ()=>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
+
+    let userLikeClick = undefined;
+    let userCommentReq = undefined;
+
     useEffect(()=>{
        fetch('/allpost',{
            headers:{
@@ -17,30 +21,40 @@ const Home  = ()=>{
        })
     },[])
 
-    const likePost = (id)=>{
-          fetch('/like',{
-              method:"put",
-              headers:{
-                  "Content-Type":"application/json",
-                  "Authorization":"Bearer "+localStorage.getItem("jwt")
-              },
-              body:JSON.stringify({
-                  postId:id
+    const likePost = (id) => {
+
+        // if user click first time then wait for user click response and mean time ignores user other clicks
+
+        if (userLikeClick) clearTimeout(userLikeClick);
+
+        userLikeClick = setTimeout(() => {
+
+            fetch('/like',{
+                method:"put",
+                headers:{
+                    "Content-Type":"application/json",
+                    "Authorization":"Bearer "+localStorage.getItem("jwt")
+                },
+                body:JSON.stringify({
+                    postId:id
+                })
+            }).then(res=>res.json())
+            .then(result=>{
+                     //   console.log(result)
+              const newData = data.map(item=>{
+                  if(item._id==result._id){
+                      return result
+                  }else{
+                      return item
+                  }
               })
-          }).then(res=>res.json())
-          .then(result=>{
-                   //   console.log(result)
-            const newData = data.map(item=>{
-                if(item._id==result._id){
-                    return result
-                }else{
-                    return item
-                }
+              setData(newData)
+            }).catch(err=>{
+                console.log(err)
             })
-            setData(newData)
-          }).catch(err=>{
-              console.log(err)
-          })
+
+        }, 300);
+
     }
     const unlikePost = (id)=>{
 
@@ -69,30 +83,39 @@ const Home  = ()=>{
     }
 
     const makeComment = (text,postId)=>{
-          fetch('/comment',{
-              method:"put",
-              headers:{
-                  "Content-Type":"application/json",
-                  "Authorization":"Bearer "+localStorage.getItem("jwt")
-              },
-              body:JSON.stringify({
-                  postId,
-                  text
-              })
-          }).then(res=>res.json())
-          .then(result=>{
-              console.log(result)
-              const newData = data.map(item=>{
-                if(item._id==result._id){
-                    return result
-                }else{
-                    return item
-                }
-             })
-            setData(newData)
-          }).catch(err=>{
-              console.log(err)
-          })
+
+        // if user try to save comment hitting enter multiple times stop user req and only accept one
+        if (userCommentReq) clearTimeout(userCommentReq);
+
+
+        userCommentReq = setTimeout(() => {
+            fetch('/comment',{
+                method:"put",
+                headers:{
+                    "Content-Type":"application/json",
+                    "Authorization":"Bearer "+localStorage.getItem("jwt")
+                },
+                body:JSON.stringify({
+                    postId,
+                    text
+                })
+            }).then(res=>res.json())
+            .then(result=>{
+                console.log(result)
+                const newData = data.map(item=>{
+                  if(item._id==result._id){
+                      return result
+                  }else{
+                      return item
+                  }
+               })
+              setData(newData)
+            }).catch(err=>{
+                console.log(err)
+            })
+        }, 300)
+
+
     }
 
     const deletePost = (postid)=>{
@@ -166,7 +189,7 @@ const Home  = ()=>{
                                     onClick={()=>{unlikePost(item._id)}}
                               >thumb_down</i>
                             : 
-                            <i className="material-icons"
+                            <i className="material-icons user-select-none"
                             onClick={()=>{likePost(item._id)}}
                             >thumb_up</i>
                             }

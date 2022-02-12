@@ -39,3 +39,7 @@
 .delete-comment{
     float: right;
 }
+
+.user-select-none {
+    user-select: none;
+}
