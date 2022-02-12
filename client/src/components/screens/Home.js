@@ -5,6 +5,8 @@ import "./Home.css"
 const Home  = ()=>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
+    const [comment, setComment] = useState('');
+    const [disableInput, setDisableInput] = useState("");
 
     let userLikeClick = undefined;
     let userCommentReq = undefined;
@@ -82,11 +84,14 @@ const Home  = ()=>{
         })
     }
 
-    const makeComment = (text,postId)=>{
+    const makeComment = (postId)=>{
 
         // if user try to save comment hitting enter multiple times stop user req and only accept one
         if (userCommentReq) clearTimeout(userCommentReq);
 
+        let text = comment;
+        setComment('');
+        setDisableInput("disabled");
 
         userCommentReq = setTimeout(() => {
             fetch('/comment',{
@@ -108,8 +113,10 @@ const Home  = ()=>{
                   }else{
                       return item
                   }
+
                })
               setData(newData)
+              setDisableInput("");
             }).catch(err=>{
                 console.log(err)
             })
@@ -210,9 +217,15 @@ const Home  = ()=>{
                                 }
                                 <form onSubmit={(e)=>{
                                     e.preventDefault()
-                                    makeComment(e.target[0].value,item._id)
+                                    makeComment(item._id)
                                 }}>
-                                  <input type="text" placeholder="Add a comment..." />  
+                                  <input 
+                                    type="text" 
+                                    disabled={disableInput}
+                                    value={comment} 
+                                    onChange={ (event) => setComment(event.target.value) } 
+                                    placeholder="Add a comment..." 
+                                  />  
                                 </form>
                                 
                             </div>
