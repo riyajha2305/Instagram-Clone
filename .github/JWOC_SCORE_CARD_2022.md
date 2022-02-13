@@ -52,7 +52,7 @@ Difficulty level : Hard | Hard<br>
 Points : 10<br>
 Github Profile : https://github.com/harshit-070<br>
 
-## Name : Harshit<br>
+## Name : Pankaj Sharma<br>
 Issue number : #51<br>
 Difficulty level : Medium<br>
 Points : 3<br>
