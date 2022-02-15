@@ -102,3 +102,111 @@ I learnt a lot about react & backend stuff while doing this including:
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+## Folder Structure
+
+```terminal
+client/
+  public
+  src
+config
+middleware
+models
+routes
+   app.js
+   package-lock.json
+   package.json
+...
+```
+
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+## Prerequisites
+
+Usage (run fullstack app on your machine)
+
+- [MongoDB](https://gist.github.com/nrollr/9f523ae17ecdbb50311980503409aeb3)
+- [Node](https://nodejs.org/en/download/) ^10.0.0
+- [npm](https://nodejs.org/en/download/package-manager/)
+
+notice, you need client and server runs concurrently in different terminal session, in order to make them talk to each other
+
+###  Client-side usage(PORT: 3000)
+```terminal
+$ cd client    // go to client folder
+$ npm i       // npm install packages
+$ npm start  // run the client side app
+
+```
+
+###  Server-side usage(PORT: 5000)
+
+####  Prepare your secret
+
+run the script at the first level:
+
+### Start
+
+```terminal
+$ npm i       // npm install packages
+$ nodemon app // this will run the server side app
+```
+
+## Deploy Server to [Heroku](https://dashboard.heroku.com/)
+```terminal
+$ npm i -g heroku
+$ heroku login
+...
+$ heroku create
+$ npm run heroku:add <your-super-app>
+// remember to run this command in the root level, not the server level, so if you follow the documentation along, you may need to do `cd ..`
+$ pwd
+/Users/<your-name>/mern
+$ npm run deploy:heroku
+```
+
+
+
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+## Snapshots of this Project
+
+### User can sign in or sign up
+
+![User can sign in or sign up](https://github.com/riyajha2305/Instagram-Clone/blob/master/screenshots/1.png)
+
+<br>
+
+### User visit Feed page
+
+![User visit Feed page](https://github.com/riyajha2305/Instagram-Clone/blob/master/screenshots/2.png)
+
+<br>
+
+### User can go to his/her profile page
+
+![User can go to his/her profile page](https://github.com/riyajha2305/Instagram-Clone/blob/master/screenshots/3.png)
+
+<br>
+
+### User can visit other users profile and follow/unfollow
+
+![User can visit other users profile and follow/unfollow](https://github.com/riyajha2305/Instagram-Clone/blob/master/screenshots/4.png)
+
+
+
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
