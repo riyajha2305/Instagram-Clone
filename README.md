@@ -77,6 +77,8 @@ I learnt a lot about react & backend stuff while doing this including:
 - optimize bits of code
 - much more...
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### What I learnt about react
 - It's really easy to prototype web-apps quickly, but when it comes to refining them and adding smaller details, the development time starts to slow down. 
 - The styling is quite hard, at first, to get right.
@@ -145,6 +147,8 @@ $ npm start  // run the client side app
 
 ###  Server-side usage(PORT: 5000)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ####  Prepare your secret
 
 run the script at the first level:
@@ -192,6 +196,8 @@ $ npm run deploy:heroku
 
 <br>
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### User can go to his/her profile page
 
 ![User can go to his/her profile page](https://github.com/riyajha2305/Instagram-Clone/blob/master/screenshots/3.png)
@@ -210,3 +216,181 @@ $ npm run deploy:heroku
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+## Open Source programs this repo has been part of
+<a href="https://github.com/riyajha2305/Instagram-Clone"><img src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"></a>
+
+
+<div align="center">
+<img src="https://media-exp1.licdn.com/dms/image/C560BAQEp7MUBpYE93g/company-logo_200_200/0/1608129179676?e=1651708800&v=beta&t=71R--Oo_R0AHY17EVdLFe50g8M5UAJ4vizvw--RaBAE" width="150px">
+</div>
+
+<div align="center">
+    <a href="https://jwoc.tech/">JGEC Winter of Code</a>
+
+</div>
+
+<br>
+
+
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+## Contribution Guidelines
+
+ <br />
+
+<summary><b>Never made an open source contribution before? Here's a quick rundown!</b></summary>
+     <br />
+
+*  Fork [this](https://github.com/riyajha2305/Instagram-Clone) repository.
+
+
+*  Clone your forked copy of the project.
+
+```
+git clone https://github.com/<your_user_name>/Instagram-Clone.git
+```
+
+
+* Navigate to the project directory :file_folder: .
+
+```
+cd clone-it
+```
+
+
+* Add a reference(remote) to the original repository.
+
+```
+git remote add upstream https://github.com/riyajha2305/Instagram-Clone.git 
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+* Check the remotes for this repository.
+
+```
+git remote -v
+```
+
+
+* Always take a pull from the upstream repository to your master branch to keep it at par with the main project(updated repository).
+
+```
+git pull upstream main
+```
+
+
+* Create a new branch.
+
+```
+git checkout -b <your_branch_name>
+```
+
+
+* Perfom your desired changes to the code base.
+
+
+* Track your changes:heavy_check_mark: .
+
+```
+git add . 
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+* Commit your changes .
+
+```
+git commit -m "Relevant message"
+```
+
+
+* Push the committed changes in your feature branch to your remote repo.
+
+```
+git push -u origin <your_branch_name>
+```
+
+
+* To create a pull request, click on `compare and pull requests`.
+
+
+* Add appropriate title and description to your pull request explaining your changes and efforts done.
+
+
+* Click on `Create Pull Request`.
+
+
+* Congrats :exclamation: You have made a PR to the harshita2216/hello-jobs :boom: . Wait for your submission to be accepted and your PR to be merged.
+
+
+* Wait for the pull request to be reviewed by a maintainer, Make changes to the pull request if the reviewing maintainer recommends them.
+
+
+* Celebrate  🥳  your success after your pull request is merged!
+
+<br>
+
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+## Contributors
+<a href="https://github.com/riyajha2305/Instagram-Clone"><img src="https://forthebadge.com/images/badges/built-by-developers.svg"  ></a> 
+<a href="https://github.com/riyajha2305/Instagram-Clone"><img src="https://forthebadge.com/images/badges/built-with-love.svg"  ></a> 
+<a href="https://github.com/riyajha2305/Instagram-Clone"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" ></a>   
+
+<br>
+
+
+Thanks to all the **people who contribute** 💜
+
+![Contributors](https://contributors-img.web.app/image?repo=riyajha2305/Instagram-Clone)
+
+
+
+<br>
+
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+## Feedback
+
+If you have any feedback or suggestions please reach out to Project - Maintainer.  
+* [RiyaJha](https://github.com/riyajha2305) 
+  
+Or you can create a  <a href="https://github.com/riyajha2305/Instagram-Clone/issues">issue</a> and mention there , which new features can make this Project more good.
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+<br>
+  
+<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<div align="center">
+
+### Show some ❤️ by starring this awesome Repository!
+
+</div>
+  
+  
+<div id="Bottom"></div>
+
+
+<br>
