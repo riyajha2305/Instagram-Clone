@@ -70,11 +70,11 @@ Difficulty level : Easy<br>
 Points : 1<br>
 Github Profile : https://github.com/binayshaw7777<br>
 
-##12 Name : Binay Shaw<br>
+##12 Name : Ayush Mishra<br>
 Issue number : #60<br>
 Difficulty level : Easy<br>
 Points : 1<br>
-Github Profile : https://github.com/binayshaw7777<br>
+Github Profile : https://github.com/ayush-sleeping<br>
 
 
 
