@@ -6,7 +6,7 @@ import M from "materialize-css";
 import { BsPersonCircle, BsPlusSquare, BsSearch } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi";
 import "./screens/FontStyles.css";
-import { useParams } from "react-router-dom";
+import logo from "../Logo/Logo.png";
 import "./Navbar.css";
 
 const NavBar = () => {
@@ -15,14 +15,13 @@ const NavBar = () => {
   const [userDetails, setUserDetails] = useState([]);
   const { state, dispatch } = useContext(UserContext);
   const history = useHistory();
-
   useEffect(() => {
     M.Modal.init(searchModal.current);
   }, []);
   const renderList = () => {
     if (state) {
       return [
-        <li key="1">
+        <li key="1" style={{ paddingLeft: "5px", paddingRight: "5px" }}>
           <i
             data-target="modal1"
             className="large material-icons modal-trigger"
@@ -33,29 +32,28 @@ const NavBar = () => {
             </i>
           </i>
         </li>,
-
-        <li key="4">
-          <Link to="/myfollowingpost">
-            <i>
-              <HiUsers size=" 1.75rem" />
-            </i>
-          </Link>
-        </li>,
-        <li key="3">
-          <Link to="/create">
-            <i>
-              <BsPlusSquare size=" 1.75rem" />
-            </i>
-          </Link>
-        </li>,
-        <li key="2">
+        <li key="2" style={{ paddingLeft: "5px", paddingRight: "5px" }}>
           <Link to="/profile">
             <i>
               <BsPersonCircle size=" 1.75rem" />
             </i>
           </Link>
         </li>,
-        <li key="5">
+        <li key="3" style={{ paddingLeft: "5px", paddingRight: "5px" }}>
+          <Link to="/create">
+            <i>
+              <BsPlusSquare size=" 1.75rem" />
+            </i>
+          </Link>
+        </li>,
+        <li key="4" style={{ paddingLeft: "5px", paddingRight: "5px" }}>
+          <Link to="/myfollowingpost">
+            <i>
+              <HiUsers size=" 1.75rem" />
+            </i>
+          </Link>
+        </li>,
+        <li key="5" style={{ paddingLeft: "5px", paddingRight: "5px" }}>
           <button
             className="btn #c62828 red darken-3"
             onClick={() => {
@@ -96,12 +94,11 @@ const NavBar = () => {
         setUserDetails(results.user);
       });
   };
-
   return (
     <nav>
       <div className="nav-wrapper white">
         <Link to={state ? "/" : "/signin"} className="brand-logo left">
-          Instagram
+          <img src={logo} alt="logo" className="logoImage" />
         </Link>
         <ul id="nav-mobile" className="right">
           {renderList()}
