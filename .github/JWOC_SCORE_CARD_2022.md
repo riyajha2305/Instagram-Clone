@@ -17,9 +17,9 @@ Points : 1<br>
 Github Profile : https://github.com/KMJ-007<br>
 
 ##3 Name :  Dhruv<br>
-Issue number : #24 | #25<br>
-Difficulty level : Hard | Hard<br>
-Points : 10<br>
+Issue number : #24 | #25 | #45<br>
+Difficulty level : Hard | Hard | Hard<br>
+Points : 15<br>
 Github Profile : https://github.com/dhruvtongia<br>
 
 ##4 Name : Shreshtha Sadhu<br>
