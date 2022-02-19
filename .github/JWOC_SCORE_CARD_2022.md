@@ -76,6 +76,12 @@ Difficulty level : Easy<br>
 Points : 1<br>
 Github Profile : https://github.com/ayush-sleeping<br>
 
+##12 Name : Amirul Sekh<br>
+Issue number : #67<br>
+Difficulty level : Medium<br>
+Points : 3<br>
+Github Profile : https://github.com/03amir<br>
+
 
 
 Keep Contributing !!!🥳
