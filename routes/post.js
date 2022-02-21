@@ -71,7 +71,7 @@ router.put('/like',requireLogin,(req,res)=>{
     },{
         new:true
     }).populate("comments.postedBy","_id name")
-    .populate("postedBy","_id name")
+    .populate("postedBy","_id name pic")
     .exec((err,result)=>{
         if(err){
             return res.status(422).json({error:err})
@@ -86,7 +86,7 @@ router.put('/unlike',requireLogin,(req,res)=>{
     },{
         new:true
     }).populate("comments.postedBy","_id name")
-    .populate("postedBy","_id name")
+    .populate("postedBy","_id name pic")
     .exec((err,result)=>{
         if(err){
             return res.status(422).json({error:err})

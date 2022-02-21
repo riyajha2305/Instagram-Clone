@@ -1,41 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap");
+.card-user-details {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
 
-.card-user-details h5{
-    font-family: Roboto;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-left: 10px;
-    padding: 5px;
-    position: relative;
-    bottom: 10px;
+.delete-post {
 }
-.like-count{
-    font-size: 1.1rem;
-    font-weight: bold;
-    font-family: Roboto;
-    margin-top: 0px;
+.card-user-details h5 {
+  width: 90%;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 5px;
+  position: relative;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
-.post-title{
-    font-family: Hind;
-    margin-bottom: 0px;
+.like-count {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: Roboto;
+  margin-top: 0px;
 }
-.post-body{
-    font-family: Hind;
-    margin-top: 0px;
+.post-title {
+  font-family: Hind;
+  margin-bottom: 0px;
 }
-.material-icons{
-    margin-right: 13px;
-    margin-left: -5px;
+.post-body {
+  font-family: Hind;
+  margin-top: 0px;
 }
-.delete-post{
-    float: right;
+.material-icons {
+  margin-right: 13px;
+  margin-left: -5px;
 }
-.favorite{
-    color: red;
+
+.favorite {
+  color: red;
 }
-.posted-by{
-    font-weight: 500;
+.posted-by {
+  font-weight: 500;
 }
-.delete-comment{
-    float: right;
+.delete-comment {
+  float: right;
+}
+
+.user-select-none {
+  user-select: none;
 }
