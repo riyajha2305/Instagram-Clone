@@ -5,9 +5,7 @@ import M from 'materialize-css'
 //icons
 import { BsPersonCircle,BsPlusSquare,BsSearch } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi";
-import "./screens/FontStyles.css";
-import logo from '../Logo/Logo.png';
-import './Navbar.css'
+import "./screens/FontStyles.css"
 
 const NavBar = ()=>{
     const  searchModal = useRef(null)
@@ -67,9 +65,7 @@ const NavBar = ()=>{
     return(
         <nav>
         <div className="nav-wrapper white">
-          <Link to={state?"/":"/signin"} className="brand-logo left">
-            <img src={logo} alt="logo" className='logoImage' />
-          </Link>
+          <Link to={state?"/":"/signin"} className="brand-logo left">Instagram</Link>
           <ul id="nav-mobile" className="right">
              {renderList()}
   
