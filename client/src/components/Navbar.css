@@ -9,20 +9,3 @@
 .brand-logo{
     font-family: Cookie;
 }
-
-.logoImage{
-    width: 50px;
-    margin-left: 20px;
-    margin-top: 8px;
-}
-
-@media screen and (max-width : 606px)  {
-
-    .logoImage{
-        width: 45px;
-        margin-left: 20px;
-        margin-top: 6px;
-    }
-    
-}
-
