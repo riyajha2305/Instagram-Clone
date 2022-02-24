@@ -1,35 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
 
-.modal-trigger {
-  color: black;
+.modal-trigger{
+    color: black;
 }
-.modal {
-  color: black;
+.modal{
+    color: black;
 }
-.brand-logo {
-  font-family: Cookie;
-}
-
-.logoImage {
-  width: 50px;
-  margin-left: 20px;
-  margin-top: 8px;
+.brand-logo{
+    font-family: Cookie;
 }
 
-@media screen and (max-width: 606px) {
-  .logoImage {
-    width: 45px;
+.logoImage{
+    width: 50px;
     margin-left: 20px;
-    margin-top: 6px;
-  }
+    margin-top: 8px;
 }
 
-.nav-wrapper {
-  padding: 0 15rem;
-  margin-bottom: 5rem;
+@media screen and (max-width : 606px)  {
+
+    .logoImage{
+        width: 45px;
+        margin-left: 20px;
+        margin-top: 6px;
+    }
+    
 }
 
-nav {
-  margin-bottom: 3rem;
-  box-shadow: 0 4px 2px -4px gray;
-}
