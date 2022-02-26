@@ -1,5 +1,158 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
 
-.input-field h2{
-    font-family: Cookie;
+@font-face {
+    font-family: Billabong;
+    src: url("/public/fonts/Billabong.ttf");
+}
+
+.signin {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 95vh;
+    background-color: #fafafa;
+    padding-top: 2rem;
+}
+
+.signin__left > img {
+    width: 27rem;
+    margin-right: 1rem;
+}
+
+.signin__right {
+    margin-top: 2rem;
+}
+
+.signin__fields {
+    border: 1px solid #dbdbdb;
+    max-width: 350px;
+    padding: 0 40px 6px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF;
+}
+
+.signin__fields .title {
+    font-size: 3rem;
+    font-family: Billabong, sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+.signin__form .inputFiled {
+    font-size: 0.8rem !important;
+    background-color: #fafafa !important;
+    height: 36px !important;
+    margin-bottom: 1rem !important;
+    padding: 0 0.5rem !important;
+    border: 1px solid #e6e4e4 !important;
+    border-radius: 3px !important;
+    box-sizing: border-box !important;
+}
+
+.signin__form .inputFiled::placeholder {
+    color: #797979;
+}
+
+.signin__form .inputFiled:focus,
+.signin__form .inputFiled:focus-visible,
+.signin__form .inputFiled:focus-within,
+.signin__form .inputFiled:-ms-keyboard-active, 
+.signin__form .inputFiled:active {
+    border: unset !important;
+    outline: unset !important;
+}
+
+.submitBtn {
+    display: block;
+    width: 100%;
+    background-color: #0095f6;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: #FFF;
+    padding: 0.4rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.division {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.division {
+    width: 100%;
+}
+
+.division div {
+    background-color: #dbdbdb;
+    height: 1px;
+    width: 100%;
+}
+
+.division p {
+    margin: 1rem;
+}
+
+.loginFacebook {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.loginFacebook svg{
+    fill: #4267B2;
+    width: 1rem;
+    height: 1rem;
+}
+
+.loginFacebook a {
+    color: #4267B2 !important;
+    font-weight: 600;
+    cursor: pointer;
+    margin: unset;
+}
+
+.forgotPass {
+    display: block;
+    font-size: 0.8rem;
+    color: #2f4a7e !important;
+    font-weight: 400;
+    margin: 0.8rem 0;
+}
+
+.signupField {
+    margin: 1rem 0;
+    text-align: center;
+    border: 1px solid #dbdbdb;
+    background-color: #FFF;
+    padding: 1rem;
+}
+
+.signupField > a {
+    display: inline-block;
+    color: #0095f6 !important;
+    font-weight: 600;
+}
+
+.getApp {
+    text-align: center;
+}
+
+.appsLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.inputError {
+    margin-top: 0.5rem;
+    color: red;
+    font-size: 0.8rem;
 }
