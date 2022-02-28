@@ -5,6 +5,7 @@ import M from 'materialize-css'
 //icons
 import {BsPlusSquare,BsSearch } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi";
+import { AiFillHome } from "react-icons/ai";
 import "./screens/FontStyles.css"
 
 const NavBar = ()=>{
@@ -20,7 +21,8 @@ const NavBar = ()=>{
        if(state){
            return [
             <li key="1" style={{paddingLeft:"5px",paddingRight:"5px"}}><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
-            <li key="2"  style={{paddingLeft:"5px",height:"65px",paddingRight:"5px"}} >
+            <li key="2" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/" ><i ><AiFillHome size=" 1.75rem"  /></i></Link></li>,
+            <li key="3"  style={{paddingLeft:"5px",height:"65px",paddingRight:"5px"}} >
               <Link 
                  style={{display:" flex",
                  alignItems: 'center',
@@ -31,9 +33,9 @@ const NavBar = ()=>{
                       style={{ width:"37px",height:"37px",borderRadius:"50px",objectFit:"cover" , overflow:"hidden" }}
                        alt="profile" />
               </Link></li>,
-            <li key="3" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
-            <li key="4" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/myfollowingpost"><i><HiUsers size=" 1.75rem"  /></i></Link></li>,
-            <li  key="5" style={{paddingLeft:"5px",paddingRight:"5px"}}>
+            <li key="4" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
+            <li key="5" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/myfollowingpost"><i><HiUsers size=" 1.75rem"  /></i></Link></li>,
+            <li  key="6" style={{paddingLeft:"5px",paddingRight:"5px"}}>
              <button className="btn #c62828 red darken-3"
             onClick={()=>{
               localStorage.clear()
