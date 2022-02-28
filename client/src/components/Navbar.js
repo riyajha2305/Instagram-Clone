@@ -3,7 +3,7 @@ import {Link ,useHistory} from 'react-router-dom'
 import {UserContext} from '../App'
 import M from 'materialize-css'
 //icons
-import { BsPersonCircle,BsPlusSquare,BsSearch } from "react-icons/bs";
+import {BsPlusSquare,BsSearch } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi";
 import "./screens/FontStyles.css"
 
@@ -20,7 +20,17 @@ const NavBar = ()=>{
        if(state){
            return [
             <li key="1" style={{paddingLeft:"5px",paddingRight:"5px"}}><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}><i ><BsSearch size=" 1.75rem"  /></i></i></li>,
-            <li key="2" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/profile" ><i ><BsPersonCircle size=" 1.75rem"  /></i></Link></li>,
+            <li key="2"  style={{paddingLeft:"5px",height:"65px",paddingRight:"5px"}} >
+              <Link 
+                 style={{display:" flex",
+                 alignItems: 'center',
+                 justifyContent: "center",
+                 height:"100%"}}
+                  to="/profile" >
+                    <img src={state.pic} 
+                      style={{ width:"37px",height:"37px",borderRadius:"50px",objectFit:"cover" , overflow:"hidden" }}
+                       alt="profile" />
+              </Link></li>,
             <li key="3" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/create"><i ><BsPlusSquare size=" 1.75rem"  /></i></Link></li>,
             <li key="4" style={{paddingLeft:"5px",paddingRight:"5px"}}><Link to="/myfollowingpost"><i><HiUsers size=" 1.75rem"  /></i></Link></li>,
             <li  key="5" style={{paddingLeft:"5px",paddingRight:"5px"}}>
