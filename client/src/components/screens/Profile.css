@@ -14,7 +14,7 @@
   align-items: center;
 }
 .top-container {
-  height: 25vh;
+  height: auto;
   width: 65rem;
   display: flex;
   justify-content: space-around;
@@ -50,6 +50,17 @@
 }
 .email {
   font-weight: bold;
+}
+
+.update-profile{
+  width: auto;
+  align-self: center;
+  background: white;
+  border: 2px solid rgb(100,100,100);
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: Nunito Sans;
 }
 
 .button {

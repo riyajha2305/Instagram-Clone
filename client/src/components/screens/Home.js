@@ -3,10 +3,13 @@ import { UserContext } from "../../App";
 import { Link } from "react-router-dom";
 import SinglePost from "./SinglePost";
 import "./Home.css";
+import Comments from "./comment";
+
 const Home = () => {
   const [data, setData] = useState([]);
   const { state, dispatch } = useContext(UserContext);
   const [comment, setComment] = useState("");
+  const [CommentLists, setCommentLists] = useState([]);
   const [disableInput, setDisableInput] = useState("");
 
   let userLikeClick = undefined;
@@ -85,12 +88,10 @@ const Home = () => {
       });
   };
 
-  const makeComment = (postId) => {
+  const makeComment = (postId, content, setCommentValue) => {
     // if user try to save comment hitting enter multiple times stop user req and only accept one
     if (userCommentReq) clearTimeout(userCommentReq);
 
-    let text = comment;
-    setComment("");
     setDisableInput("disabled");
 
     userCommentReq = setTimeout(() => {
@@ -102,12 +103,11 @@ const Home = () => {
         },
         body: JSON.stringify({
           postId,
-          text,
+          content,
         }),
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
           const newData = data.map((item) => {
             if (item._id == result._id) {
               return result;
@@ -115,6 +115,7 @@ const Home = () => {
               return item;
             }
           });
+          setCommentValue("");
           setData(newData);
           setDisableInput("");
         })
@@ -175,6 +176,8 @@ const Home = () => {
         console.log(err);
       });
   };
+
+
   return (
     <div className="home">
       {data.map((item) => {
