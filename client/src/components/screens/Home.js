@@ -2,10 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../App";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Comments from "./comment";
+
 const Home = () => {
   const [data, setData] = useState([]);
   const { state, dispatch } = useContext(UserContext);
   const [comment, setComment] = useState("");
+  const [CommentLists, setCommentLists] = useState([]);
   const [disableInput, setDisableInput] = useState("");
 
   let userLikeClick = undefined;
@@ -84,12 +87,10 @@ const Home = () => {
       });
   };
 
-  const makeComment = (postId) => {
+  const makeComment = (postId, content, setCommentValue) => {
     // if user try to save comment hitting enter multiple times stop user req and only accept one
     if (userCommentReq) clearTimeout(userCommentReq);
 
-    let text = comment;
-    setComment("");
     setDisableInput("disabled");
 
     userCommentReq = setTimeout(() => {
@@ -101,12 +102,11 @@ const Home = () => {
         },
         body: JSON.stringify({
           postId,
-          text,
+          content,
         }),
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
           const newData = data.map((item) => {
             if (item._id == result._id) {
               return result;
@@ -114,6 +114,7 @@ const Home = () => {
               return item;
             }
           });
+          setCommentValue("");
           setData(newData);
           setDisableInput("");
         })
@@ -174,6 +175,8 @@ const Home = () => {
         console.log(err);
       });
   };
+
+
   return (
     <div className="home">
       {data.map((item) => {
@@ -240,36 +243,13 @@ const Home = () => {
               <h6 className="like-count">{item.likes.length} likes</h6>
               <h6 className="post-title">{item.title}</h6>
               <p className="post-body">{item.body}</p>
-              {item.comments.map((record) => {
-                return (
-                  <h6 key={record._id}>
-                    <span className="posted-by">{record.postedBy.name}</span>{" "}
-                    {record.text}
-                    {record.postedBy._id == state._id && (
-                      <i
-                        className="material-icons delete-comment"
-                        onClick={() => deleteComment(item._id, record._id)}
-                      >
-                        delete
-                      </i>
-                    )}
-                  </h6>
-                );
-              })}
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  makeComment(item._id);
-                }}
-              >
-                <input
-                  type="text"
-                  disabled={disableInput}
-                  value={comment}
-                  onChange={(event) => setComment(event.target.value)}
-                  placeholder="Add a comment..."
-                />
-              </form>
+
+
+              <Comments
+                CommentLists={item.comments}
+                postId={item._id} makeComment={makeComment} disableInput={disableInput} data={data} setData={setData} deleteComment={deleteComment} />
+
+
             </div>
           </div>
         );
