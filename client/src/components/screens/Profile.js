@@ -63,6 +63,7 @@ const Profile = () => {
   const updatePhoto = (file) => {
     setImage(file);
   };
+
   return (
     <div className="profile">
       <div className="main">

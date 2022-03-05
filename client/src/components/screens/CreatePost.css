@@ -1,60 +1,84 @@
 .create-post {
-    background-color: #fffffffb;
-    margin: 30px auto;
-    max-width: 500px;
-    padding: 20px;
-    text-align: center;
-    padding: 1rem;
-    margin: 2rem auto;
-    width: 50rem;
-    max-width: 95%;
-    border-radius: 12px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-  }
-  
-  .create-post button {
-    font: inherit;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border: 1px solid #00195d;
-    background-color: #194e94fd;
-    color: white;
-    border-radius: 12px;
-    margin-right: 1rem;
-  }
-  
-  .create-post button:hover,
-  .create-post button:active {
-    background-color: #061174f5;
-    border-color: #510674;
-  }
-  
-  .create-post button.alternative {
-    color: #220131;
-    border-color: transparent;
-    background-color: transparent;
-  }
-  
-  .create-post.alternative:hover,
-  .create-post button.alternative:active {
-    background-color: #ddb3f8;
-  }
-  .create-post_controls {
-    
-    
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  .create-post_control input {
-    font: inherit;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 20rem;
-    max-width: 100%;
-  }
-  
-  .create-post_actions {
-      text-align: center;
-  }
+  background-color: #fffffffb;
+  margin: 30px auto;
+
+  height: 500px;
+
+  text-align: center;
+
+  margin: 2rem auto;
+  width: 35rem;
+  max-width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0rem;
+}
+
+.create-post button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.51rem 2rem;
+  border: 1px solid #00195d;
+  background-color: #0174f0;
+  color: white;
+  border-radius: 5px;
+  margin: 1rem;
+}
+
+.create-post button:hover,
+.create-post button:active {
+  background-color: #0262c9;
+  border-color: #510674;
+}
+
+.create-post button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.create-post.alternative:hover,
+.create-post button.alternative:active {
+  background-color: #ddb3f8;
+}
+.create-post_controls {
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.create-post_control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+.create-post_control {
+  margin: 1rem;
+}
+.create-post_actions {
+  text-align: center;
+}
+.create-post_controls h5 {
+  text-align: center;
+  font-size: 1.25rem;
+}
+.create-post_controls hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgb(211, 211, 211);
+}
+.create-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+.create-img svg {
+  width: 5rem;
+}
