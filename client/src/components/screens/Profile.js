@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import "./Profile.css";
 
@@ -7,7 +7,7 @@ const Profile = () => {
   const [mypics, setPics] = useState([]);
   const { state, dispatch } = useContext(UserContext);
   const [image, setImage] = useState("");
-  const [bio,setBio] = useState("This is a dummy bio");
+  const [bio, setBio] = useState("This is a dummy bio");
   useEffect(() => {
     fetch("/mypost", {
       headers: {
@@ -74,6 +74,9 @@ const Profile = () => {
           <div className="info">
             <div className="profile-name">
               <h4 className="top-line">{state ? state.name : "loading"} </h4>
+              <button type="submit" className="update-profile">
+                <Link to="/UpdateProfile">Update Profile</Link>
+              </button>
               <div className="file-field input-field">
                 <div className="btn button">
                   <span>Update pic</span>
@@ -100,7 +103,6 @@ const Profile = () => {
             </div>
             <h6 className="email">{state ? state.email : "loading"}</h6>
             <h6 className="bio">{bio}</h6>
-            <button type="submit" className="update-profile"><Link to="/UpdateProfile">Update Profile</Link></button>
           </div>
         </div>
       </div>
