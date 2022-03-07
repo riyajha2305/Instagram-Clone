@@ -1,11 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Hind&family=Lobster+Two&family=Nunito+Sans:wght@200&family=Oleo+Script&family=Open+Sans:wght@300&family=Pacifico&family=Roboto&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@400&display=swap");
 
-.modal-trigger{
-    color: black;
+.modal-trigger {
+  color: black;
 }
-.modal{
-    color: black;
+.modal {
+  color: black;
 }
-.brand-logo{
-    font-family: Cookie;
+.brand-logo {
+  font-family: Cookie;
+}
+.nav-wrapper {
+  padding: 0 13rem;
+  border: 0.5px solid gray;
+  box-shadow: none;
+}
+
+.nav-wrapper > *:hover {
+  background-color: transparent;
+}
+
+.logout {
+  background-color: #0095f6 !important;
+}
+
+.logout:hover {
+  background-color: #0174f0 !important;
 }
