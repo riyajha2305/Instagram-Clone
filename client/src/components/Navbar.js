@@ -135,15 +135,22 @@ const NavBar = () => {
         id="modal1"
         class="modal"
         ref={searchModal}
-        style={{ color: "black" }}
+        style={{
+          color: "black",
+        }}
       >
         <div className="modal-content">
-          <input
-            type="text"
-            placeholder="search users"
-            value={search}
-            onChange={(e) => fetchUsers(e.target.value)}
-          />
+          <div>
+            <input
+              type="text"
+              placeholder="search users"
+              value={search}
+              className="modal-input"
+              onChange={(e) => fetchUsers(e.target.value)}
+            />
+            <BsSearch size=" 1.75rem" />
+          </div>
+
           <ul className="collection">
             {userDetails.map((item) => {
               return (
