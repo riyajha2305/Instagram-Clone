@@ -102,24 +102,26 @@ function SinglePost({
         })}
         {showmore ? (
           <button
+            className="show-btn"
             onClick={() => {
               setShowMore(false);
               setCommentNum(6);
             }}
           >
-            Show less
+            View less
           </button>
         ) : (
           <button
+            className="show-btn"
             onClick={() => {
               setShowMore(true);
               setCommentNum(item.comments.length);
             }}
           >
-            Show more
+            View more
           </button>
         )}
-
+        <hr className="divider" />
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -128,6 +130,7 @@ function SinglePost({
         >
           <input
             type="text"
+            className="comment-inp"
             disabled={disableInput}
             value={comment}
             onChange={(event) => setComment(event.target.value)}

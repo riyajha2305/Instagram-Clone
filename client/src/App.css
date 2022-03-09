@@ -178,3 +178,32 @@ h2 {
   border-radius: 80px;
   border: 1px black solid;
 }
+
+.show-btn {
+  width: 7rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  color: rgb(140, 140, 140);
+  font-size: 0.95rem;
+}
+
+.show-btn:focus {
+  background-color: transparent;
+}
+
+.divider {
+  border: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.comment-inp {
+  border: none !important;
+  margin-top: 2rem !important ;
+}
+.comment-inp:focus {
+  border: none !important;
+}
