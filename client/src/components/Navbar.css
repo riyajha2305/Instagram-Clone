@@ -5,6 +5,9 @@
 }
 .modal {
   color: black;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 10px;
 }
 .brand-logo {
   font-family: Cookie;
@@ -25,4 +28,24 @@
 
 .logout:hover {
   background-color: #0174f0 !important;
+}
+
+.modal-content div {
+  display: flex;
+}
+
+.modal-input {
+  width: 90% !important;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-footer button {
+  background-color: #0095f6;
+  color: white;
+  border-radius: 5px;
 }
